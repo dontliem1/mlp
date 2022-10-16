@@ -1,0 +1,9 @@
+name: "folga-mlp"
+description: "Молодежная лидерская премия"
+author: "FOL'GA"
+homepage: "https://folga.digital"
+code: "folga-mlp"
+form:
+    fields:
+        googleanalytics_id:
+            label: 'Google Analytics ID'

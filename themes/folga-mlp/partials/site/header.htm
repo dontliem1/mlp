@@ -1,0 +1,16 @@
+<nav class="award-nav">
+    <div class="container">
+        <a class="award-nav__logo"{% if this.page.id is not same as "home" %} href="/"{% endif %}>МЛП</a>
+        {# <ul class="award-nav__list">
+            <li class="award-nav__item">
+                <a class="award-nav__link" href="/#about">О проекте</a>
+            </li>
+            <li class="award-nav__item">
+                <a class="award-nav__link"{% if this.page.id is not same as 2018 %}  href="{{ '2018'|page }}"{% endif %}>Победители 2018</a>
+            </li>
+            <li class="award-nav__item">
+                <a class="award-nav__link"{% if this.page.id is not same as 2021 %}  href="{{ '2021'|page }}"{% endif %}>Победители 2021</a>
+            </li>
+        </ul> #}
+    </div>
+</nav>
