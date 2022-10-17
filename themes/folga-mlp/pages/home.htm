@@ -305,3 +305,31 @@ description = "Расскажи о событиях и проектах, ко�
         </ul>
   </section>
 </div>
+{% put scripts %}
+<script>
+  // Автолистание фотографий
+  const slideWrappers = document.getElementsByClassName('js_slideshow');
+  function startSlideshow(slidesWrapper) {
+    if (!slidesWrapper.children.length) {
+        return;
+    }
+
+    let lastSlide = slidesWrapper.children[slidesWrapper.children.length - 1];
+    lastSlide.classList.add('js_slideshow--active');
+    setInterval(function () {
+      let activeHeroImg = slidesWrapper.querySelector('.js_slideshow--active');
+      let nextActiveHeroImg = activeHeroImg.previousElementSibling ?? lastSlide;
+
+      if (activeHeroImg && nextActiveHeroImg) {
+        nextActiveHeroImg.hidden = false;
+        nextActiveHeroImg.classList.add('js_slideshow--active');
+        activeHeroImg.classList.remove('js_slideshow--active');
+        setTimeout(() => activeHeroImg.hidden = true, 1000);
+        }
+    }, 6000);
+  }
+  for (let i = 0; i < slideWrappers.length; i++) {
+    startSlideshow(slideWrappers[i]);
+  }
+</script>
+{% endput %}
