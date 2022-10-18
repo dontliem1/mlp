@@ -13,14 +13,13 @@ function onSubmitOrderForm()
 <main class="container">
     <h1>Расскажи о событии или проекте</h1>
     {{ form_open({ method: 'post', id: 'awardForm' }) }}
-        <section>
-            <h2 class="section-heading">Участник</h2>
         <fieldset>
+            <legend class="section-heading">Участник</legend>
             <p class="award-form__row">
                 <label class="award-form__label" for="name">ФИО</label>
                 <input class="award-form__input" name="name" id="name" placeholder="Иванова Мария Сергеевна" required>
             </p>
-            {# <p class="award-form__row">
+            <p class="award-form__row">
                 <label class="award-form__label" for="date">Дата рождения</label>
                 <input class="award-form__input" type="date" name="date" id="date" max="{{ 'now'|date('Y-m-d') }}" required>
             </p>
@@ -44,13 +43,11 @@ function onSubmitOrderForm()
                 <legend class="award-form__label">Уровень проектного менеджмента</legend>
                 <label><input class="award-form__input" name="level" type="radio" selected><b>Профессиональный общественник / профи</b><br>неформальное сообщество или НКО, не менее 2-х лет опыта реализации социально-значимых инициатив; опыт реализации инициатив за счет средств всероссийских грантовых конкурсов</label>
                 <label><input class="award-form__input" name="level" type="radio"><b>Начинающий общественник / дебютант</b><br>неформальное сообщество или НКО, менее 2-х лет опыта реализации социально-значимых инициатив; опыт реализации инициатив за счет грантовой поддержки региона, без грантовой поддержки</label>
-            </fieldset> #}
+            </fieldset>
         </fieldset>
-        </section>
 
-        {# <details>
-            <summary>Команда</summary>
         <fieldset>
+            <legend class="section-heading">Команда</legend>
             <p class="award-form__row">
                 <label class="award-form__label" for="title">Название</label>
                 <input class="award-form__input" name="title" id="title" placeholder="Неформальное объединение / НКО" required>
@@ -64,11 +61,9 @@ function onSubmitOrderForm()
                 <textarea class="award-form__input" name="social" id="social" placeholder="ВКонтакте, Одноклассники и др. при наличии" rows="3"></textarea>
             </p>
         </fieldset>
-        </details>
 
-        <details>
-        <summary>Событие или проект</summary>
             <fieldset>
+        <legend class="section-heading">Событие или проект</legend>
                 <p class="award-form__row">
                     <label class="award-form__label" for="project1">Название</label>
                     <input class="award-form__input" name="project1" id="project1" placeholder="Классное мероприятие" required>
@@ -107,13 +102,12 @@ function onSubmitOrderForm()
                     <label class="award-form__label" for="media1">Ссылки на публикации в СМИ или социальных медиа</label>
                     <textarea class="award-form__input" name="media1" id="media1" placeholder="https://72.ru/primer" rows="2"></textarea>
                 </p>
-                <p class="award-form__row">
+                <div class="award-form__row">
                     <label class="award-form__label" for="vk1">Ссылка на видеоролик-визитку во ВКонтакте</label>
                     <p>При публикации использовать хэштег <code>#млп2022</code>. Продолжительность не более 1,5 минут, горизонтальный формат. Рассказать о себе (ФИО, 1-2 регалии), своих достижениях, своем неформальном сообществе или НКО, ключевых векторах деятельности и инициативах (событиях и проектах) команды. Допускается использование в ролике фото- и видеоматериалов с реализованных ранее инициатив (событий и проектов).</p>
                     <input class="award-form__input" type="url" name="vk1" id="vk1" placeholder="https://vk.com/video-208240117_456239018">
-                </p>
+                </div>
             </fieldset>
-        </details>
         <details>
         <summary>Второй проект (необязательно)</summary>
             <fieldset>
@@ -155,11 +149,11 @@ function onSubmitOrderForm()
                     <label class="award-form__label" for="media2">Ссылки на публикации в СМИ или социальных медиа</label>
                     <textarea class="award-form__input" name="media2" id="media2" placeholder="https://72.ru/primer" rows="2"></textarea>
                 </p>
-                <p class="award-form__row">
+                <div class="award-form__row">
                     <label class="award-form__label" for="vk2">Ссылка на видеоролик-визитку во ВКонтакте</label>
                     <p>При публикации использовать хэштег <code>#млп2022</code>. Продолжительность не более 1,5 минут, горизонтальный формат. Рассказать о себе (ФИО, 1-2 регалии), своих достижениях, своем неформальном сообществе или НКО, ключевых векторах деятельности и инициативах (событиях и проектах) команды. Допускается использование в ролике фото- и видеоматериалов с реализованных ранее инициатив (событий и проектов).</p>
                     <input class="award-form__input" type="url" name="vk2" id="vk2" placeholder="https://vk.com/video-208240227_456239028">
-                </p>
+                </div>
             </fieldset>
         </details>
         <details>
@@ -203,13 +197,13 @@ function onSubmitOrderForm()
                     <label class="award-form__label" for="media3">Ссылки на публикации в СМИ или социальных медиа</label>
                     <textarea class="award-form__input" name="media3" id="media3" placeholder="https://72.ru/primer" rows="2"></textarea>
                 </p>
-                <p class="award-form__row">
+                <div class="award-form__row">
                     <label class="award-form__label" for="vk3">Ссылка на видеоролик-визитку во ВКонтакте</label>
                     <p>При публикации использовать хэштег <code>#млп2022</code>. Продолжительность не более 1,5 минут, горизонтальный формат. Рассказать о себе (ФИО, 1-2 регалии), своих достижениях, своем неформальном сообществе или НКО, ключевых векторах деятельности и инициативах (событиях и проектах) команды. Допускается использование в ролике фото- и видеоматериалов с реализованных ранее инициатив (событий и проектов).</p>
                     <input class="award-form__input" type="url" name="vk3" id="vk3" placeholder="https://vk.com/video-208240337_456239038">
-                </p>
+                </div>
             </fieldset>
-        </details> #}
+        </details>
 
         {{ form_button('Номинировать', { class: 'award-form__btn', type: 'submit' }) }}
         <br>

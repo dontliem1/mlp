@@ -141,6 +141,12 @@ code {
     line-height: 110%;
     font-weight: bold;
 }
+fieldset + fieldset {
+    margin-top: 2em;
+}
+fieldset ~ details {
+    margin-top: 1.5em;
+}
 
 .section-heading--small {
     font-weight: inherit;
@@ -645,7 +651,7 @@ textarea.award-form__input {
     border-radius: 0;
     padding: .5em .75em;
     font: inherit;
-    margin: .5em 0;
+    margin: 2em 0 .5em;
     transition: background-color .2s, color .2s, border-color .2s;
     cursor: pointer;
     text-transform: uppercase;
