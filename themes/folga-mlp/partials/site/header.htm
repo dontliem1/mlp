@@ -1,8 +1,13 @@
 <nav class="award-nav container">
-    <a class="award-nav__logo"{% if this.page.id is not same as "home" %} href="/"{% endif %}>МЛП</a>
+    <a class="award-nav__logo"{% if this.page.id is not same as "home" %} href="/"{% endif %}>
+        <img src="{{ 'assets/images/logo.png'|theme }}" alt="МЛП" width="160" height="93">
+    </a>
     <ul class="award-nav__list">
         <li class="award-nav__item">
             <a class="award-nav__link" href="/#about">О проекте</a>
+        </li>
+        <li class="award-nav__item">
+            <a class="award-nav__link" href="{{ 'nominate'|page }}">Подать заявку</a>
         </li>
         {# <li class="award-nav__item">
             <a class="award-nav__link"{% if this.page.id is not same as 2018 %}  href="{{ '2018'|page }}"{% endif %}>Победители 2018</a>

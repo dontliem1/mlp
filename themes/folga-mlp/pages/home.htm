@@ -1,37 +1,37 @@
 title = "Молодежная лидерская премия"
 url = "/"
 layout = "default"
-description = "Расскажи о событиях и проектах, которые ты посетил(а) или организовывала и номинируй их на молодежную лидерскую премию."
+description = "Расскажи о событиях и проектах, которые ты посетил(а) или организовывала и номинируй их на молодежную лидерскую премию."
 ==
-<div class="award-hero">
+<div class="award-hero container">
   <div class="award-hero__pictures js_slideshow">
     {% for i in 1..7 %}
       <div class="award-hero__img js_slideshow__slide" style="background-image: url('{{ ('assets/images/hero/'~i~'.jpg')|theme }}');"></div>
     {% endfor %}
   </div>
-  <div class="container">
+  <div>
     <div class="award-hero__text" id="about">
       <h1 class="award-hero__title">Молодежная лидерская премия</h1>
       <div class="award-hero__description">
-          <p>Организуешь социально-значимые события и проекты в Тюменской области? Запускаешь новые направления, предлагаешь нестандартные решения и делаешь регион лучше с каждым днём? Это конкурс для тебя!</p>
-          <p>Расскажи о себе, своём сообществе и реализованной вами инициативе (принимаются события и проекты, реализованные в период с мая 2021 по сентябрь 2022 года) и получи возможность выиграть награду от Губернатора Тюменской области и войти в каталог «72 новых повода полюбить Тюменскую область ещё сильнее»</p>
+          <p>Организуешь социально-значимые события и проекты в Тюменской области? Запускаешь новые направления, предлагаешь нестандартные решения и делаешь регион лучше с каждым днём? Это конкурс для тебя!</p>
+          <p>Расскажи о себе, своём сообществе и реализованной вами инициативе (принимаются события и проекты, реализованные в период с мая 2021 по сентябрь 2022 года) и получи возможность выиграть награду от Губернатора Тюменской области и войти в каталог «72 новых повода полюбить Тюменскую область ещё сильнее»</p>
       </div>
     </div>
     <div class="award-hero__motivations">
       <div class="award-hero__motivate">
-        <b class="award-hero__motivate_title">Заполни заявку на сайте</b>
+        <b class="award-hero__motivate_title">Заполни заявку на сайте</b>
       </div>
       <div class="award-hero__motivate">
         <b class="award-hero__motivate_title">Сними ролик-визитку</b>
-        <p class="award-hero__motivate_text">и выложи её на страничке во ВКонтакте</p>
+        <p class="award-hero__motivate_text">и выложи её на страничке во ВКонтакте</p>
       </div>
-      <p>ТОП-72 будет объявлен в декабре 2022 года.</p>
+      <p>ТОП-72 будет объявлен в декабре 2022 года.</p>
     </div>
   </div>
 </div>
 <section class="award-criteria container" id="criteria">
-  <h2 class="section-heading">Критерии для участия в проекте</h2>
-  <p>Реализованные события и проекты должны соответствовать следующим требованиям</p>
+  <h2 class="section-heading">Критерии для участия в премии</h2>
+  <p>Реализованные события и проекты должны соответствовать следующим требованиям</p>
   <div class="award-criteria__list">
     <div class="award-criteria__item">
       <b class="award-criteria__title">Дело</b>
@@ -39,18 +39,18 @@ description = "Расскажи о событиях и проектах, ко�
     </div>
     <div class="award-criteria__item">
       <b class="award-criteria__title">Команда</b>
-      <p class="award-criteria__description">организованы группой людей, в состав которой входит не менее 3-х человек</p>
+      <p class="award-criteria__description">организованы группой людей, в состав которой входит не менее 3-х человек</p>
     </div>
     <div class="award-criteria__item">
       <b class="award-criteria__title">Инициативность</b>
-      <p class="award-criteria__description">реализованы сообществом по собственному желанию</p>
+      <p class="award-criteria__description">реализованы сообществом по собственному желанию</p>
     </div>
     <div class="award-criteria__item">
       <b class="award-criteria__title">Публичность</b>
-      <p class="award-criteria__description">упоминаться в СМИ и/или социальных медиа</p>
+      <p class="award-criteria__description">упоминаться в СМИ и/или социальных медиа</p>
     </div>
   </div>
-  <p>Еще больше информации о конкурсе ты можешь узнать из его <a href="{{ 'assets/pdf/konkurs.pdf'|theme }}" target="_blank" class="link--solid link--pdf">положения</a>.</p>
+  <p>Еще больше информации о конкурсе ты можешь узнать из его <a href="{{ 'assets/pdf/konkurs.pdf'|theme }}" target="_blank" class="link--solid link--pdf">положения</a>.</p>
 </section>
 
 {% if award.experts.people %}
@@ -72,220 +72,16 @@ description = "Расскажи о событиях и проектах, ко�
   </section>
 {% endif %}
 
-<section class="award-form" id="nominate">
-    <h2 class="award-form__heading">
-        <span class="container">Расскажи о событии или проекте</span>
-    </h2>
-    <form class="award-form__inputs" name="Номинация события" action="https://folga.digital/api/mail.php" method="post">
-        <details>
-            <summary>Участник</summary>
-        <fieldset>
-            <p class="award-form__row">
-                <label class="award-form__label" for="name">ФИО</label>
-                <input class="award-form__input" name="name" id="name" placeholder="Иванова Мария Сергеевна" required>
-            </p>
-            <p class="award-form__row">
-                <label class="award-form__label" for="date">Дата рождения</label>
-                <input class="award-form__input" type="date" name="date" id="date" max="{{ 'now'|date('Y-m-d') }}" required>
-            </p>
-            <p class="award-form__row">
-                <label class="award-form__label" for="city">Место проживания</label>
-                <input class="award-form__input" name="city" id="city" placeholder="Тюмень" required>
-            </p>
-            <p class="award-form__row">
-                <label class="award-form__label" for="job">Место работы и должность / место учебы, направление и курс обучения</label>
-                <input class="award-form__input" name="job" id="job" placeholder="ООО «Компания», менеджер" required>
-            </p>
-            <p class="award-form__row">
-                <label class="award-form__label" for="contact">Контактные данные</label>
-                <textarea class="award-form__input" name="contact" id="contact" placeholder="+7 999 999-99-99, https://vk.me/1" rows="2" required></textarea>
-            </p>
-            <p class="award-form__row">
-                <label class="award-form__label" for="achievements">Достижения</label>
-                <textarea class="award-form__input" name="achievements" id="achievements" placeholder="Награды, знаки отличия, иные значимые достижения" rows="4" required></textarea>
-            </p>
-            <fieldset class="award-form__row">
-                <legend class="award-form__label">Уровень проектного менеджмента</legend>
-                <label><input class="award-form__input" name="level" type="radio" selected><b>Профессиональный общественник / профи</b><br>неформальное сообщество или НКО, не менее 2-х лет опыта реализации социально-значимых инициатив; опыт реализации инициатив за счет средств всероссийских грантовых конкурсов</label>
-                <label><input class="award-form__input" name="level" type="radio"><b>Начинающий общественник / дебютант</b><br>неформальное сообщество или НКО, менее 2-х лет опыта реализации социально-значимых инициатив; опыт реализации инициатив за счет грантовой поддержки региона, без грантовой поддержки</label>
-            </fieldset>
-        </fieldset>
-        </details>
-
-        <details>
-            <summary>Команда</summary>
-        <fieldset>
-            <p class="award-form__row">
-                <label class="award-form__label" for="title">Название</label>
-                <input class="award-form__input" name="title" id="title" placeholder="Неформальное объединение / НКО" required>
-            </p>
-            <p class="award-form__row">
-                <label class="award-form__label" for="team">ФИО участников команды</label>
-                <textarea class="award-form__input" name="team" id="team" placeholder="Иванов Петр Васильевич, Пушкина Елена Михайловна" rows="5" required></textarea>
-            </p>
-            <p class="award-form__row">
-                <label class="award-form__label" for="social">Социальные сети команды</label>
-                <textarea class="award-form__input" name="social" id="social" placeholder="ВКонтакте, Одноклассники и др. при наличии" rows="3"></textarea>
-            </p>
-        </fieldset>
-        </details>
-
-        <details>
-        <summary>Событие или проект</summary>
-            <fieldset>
-                <p class="award-form__row">
-                    <label class="award-form__label" for="project1">Название</label>
-                    <input class="award-form__input" name="project1" id="project1" placeholder="Классное мероприятие" required>
-                </p>
-                <fieldset class="award-form__row">
-                    <legend class="award-form__label">Направление</legend>
-                    <label><input class="award-form__input" type="radio" name="area1" selected> Дети и родители</label>
-                    <label><input class="award-form__input" type="radio" name="area1" selected> Дети</label>
-                    <label><input class="award-form__input" type="radio" name="area1" selected> Добровольчество и благотворительность</label>
-                    <label><input class="award-form__input" type="radio" name="area1" selected> История и патриотика</label>
-                    <label><input class="award-form__input" type="radio" name="area1" selected> Креатив и творчество</label>
-                    <label><input class="award-form__input" type="radio" name="area1" selected> Медиа и кино</label>
-                    <label><input class="award-form__input" type="radio" name="area1" selected> Образование и наука</label>
-                    <label><input class="award-form__input" type="radio" name="area1" selected> Предпринимательство и инициативы</label>
-                    <label><input class="award-form__input" type="radio" name="area1" selected> Спорт и здоровый образ жизни</label>
-                    <label><input class="award-form__input" type="radio" name="area1" selected> Туризм</label>
-                    <label><input class="award-form__input" type="radio" name="area1" selected> Экология</label>
-                </fieldset>
-                <p class="award-form__row">
-                    <label class="award-form__label" for="geography1">География</label>
-                    <input class="award-form__input" name="geography1" id="geography1" placeholder="Тюменская область" required>
-                </p>
-                <p class="award-form__row">
-                    <label class="award-form__label" for="quantity1">Количество участников</label>
-                    <input class="award-form__input" name="quantity1" id="quantity1" placeholder="Тюменская область" required>
-                </p>
-                <p class="award-form__row">
-                    <label class="award-form__label" for="achievements1">Ключевые достижения</label>
-                    <textarea class="award-form__input" name="achievements1" id="achievements1" placeholder="Заработали 200 000 рублей за день мероприятия" required rows="4"></textarea>
-                </p>
-                <p class="award-form__row">
-                    <label class="award-form__label" for="social1">Социальные сети команды</label>
-                    <textarea class="award-form__input" name="social1" id="social1" placeholder="ВКонтакте, Одноклассники и др. при наличии" rows="3"></textarea>
-                </p>
-                <p class="award-form__row">
-                    <label class="award-form__label" for="media1">Ссылки на публикации в СМИ или социальных медиа</label>
-                    <textarea class="award-form__input" name="media1" id="media1" placeholder="https://72.ru/primer" rows="2"></textarea>
-                </p>
-                <p class="award-form__row">
-                    <label class="award-form__label" for="vk1">Ссылка на видеоролик-визитку во ВКонтакте</label>
-                    <p>При публикации использовать хэштег <code>#млп2022</code>. Продолжительность не более 1,5 минут, горизонтальный формат. Рассказать о себе (ФИО, 1-2 регалии), своих достижениях, своем неформальном сообществе или НКО, ключевых векторах деятельности и инициативах (событиях и проектах) команды. Допускается использование в ролике фото- и видеоматериалов с реализованных ранее инициатив (событий и проектов).</p>
-                    <input class="award-form__input" type="url" name="vk1" id="vk1" placeholder="https://vk.com/video-208240117_456239018">
-                </p>
-            </fieldset>
-        </details>
-        <details>
-        <summary>Второй проект (необязательно)</summary>
-            <fieldset>
-                <p class="award-form__row">
-                    <label class="award-form__label" for="project2">Название</label>
-                    <input class="award-form__input" name="project2" id="project2" placeholder="Классное мероприятие" required>
-                </p>
-                <fieldset class="award-form__row">
-                    <legend class="award-form__label">Направление</legend>
-                    <label><input class="award-form__input" type="radio" name="area2" selected> Дети и родители</label>
-                    <label><input class="award-form__input" type="radio" name="area2" selected> Дети</label>
-                    <label><input class="award-form__input" type="radio" name="area2" selected> Добровольчество и благотворительность</label>
-                    <label><input class="award-form__input" type="radio" name="area2" selected> История и патриотика</label>
-                    <label><input class="award-form__input" type="radio" name="area2" selected> Креатив и творчество</label>
-                    <label><input class="award-form__input" type="radio" name="area2" selected> Медиа и кино</label>
-                    <label><input class="award-form__input" type="radio" name="area2" selected> Образование и наука</label>
-                    <label><input class="award-form__input" type="radio" name="area2" selected> Предпринимательство и инициативы</label>
-                    <label><input class="award-form__input" type="radio" name="area2" selected> Спорт и здоровый образ жизни</label>
-                    <label><input class="award-form__input" type="radio" name="area2" selected> Туризм</label>
-                    <label><input class="award-form__input" type="radio" name="area2" selected> Экология</label>
-                </fieldset>
-                <p class="award-form__row">
-                    <label class="award-form__label" for="geography2">География</label>
-                    <input class="award-form__input" name="geography2" id="geography2" placeholder="Тюменская область" required>
-                </p>
-                <p class="award-form__row">
-                    <label class="award-form__label" for="quantity2">Количество участников</label>
-                    <input class="award-form__input" name="quantity2" id="quantity2" placeholder="Тюменская область" required>
-                </p>
-                <p class="award-form__row">
-                    <label class="award-form__label" for="achievements2">Ключевые достижения</label>
-                    <textarea class="award-form__input" name="achievements2" id="achievements2" placeholder="Заработали 200 000 рублей за день мероприятия" required rows="4"></textarea>
-                </p>
-                <p class="award-form__row">
-                    <label class="award-form__label" for="social2">Социальные сети команды</label>
-                    <textarea class="award-form__input" name="social2" id="social2" placeholder="ВКонтакте, Одноклассники и др. при наличии" rows="3"></textarea>
-                </p>
-                <p class="award-form__row">
-                    <label class="award-form__label" for="media2">Ссылки на публикации в СМИ или социальных медиа</label>
-                    <textarea class="award-form__input" name="media2" id="media2" placeholder="https://72.ru/primer" rows="2"></textarea>
-                </p>
-                <p class="award-form__row">
-                    <label class="award-form__label" for="vk2">Ссылка на видеоролик-визитку во ВКонтакте</label>
-                    <p>При публикации использовать хэштег <code>#млп2022</code>. Продолжительность не более 1,5 минут, горизонтальный формат. Рассказать о себе (ФИО, 1-2 регалии), своих достижениях, своем неформальном сообществе или НКО, ключевых векторах деятельности и инициативах (событиях и проектах) команды. Допускается использование в ролике фото- и видеоматериалов с реализованных ранее инициатив (событий и проектов).</p>
-                    <input class="award-form__input" type="url" name="vk2" id="vk2" placeholder="https://vk.com/video-208240227_456239028">
-                </p>
-            </fieldset>
-        </details>
-        <details>
-        <summary>Третий проект (необязательно)</summary>
-            <fieldset>
-                <p class="award-form__row">
-                    <label class="award-form__label" for="project3">Название</label>
-                    <input class="award-form__input" name="project3" id="project3" placeholder="Классное мероприятие" required>
-                </p>
-                <fieldset class="award-form__row">
-                    <legend class="award-form__label">Направление</legend>
-                    <label><input class="award-form__input" type="radio" name="area3" selected> Дети и родители</label>
-                    <label><input class="award-form__input" type="radio" name="area3" selected> Дети</label>
-                    <label><input class="award-form__input" type="radio" name="area3" selected> Добровольчество и благотворительность</label>
-                    <label><input class="award-form__input" type="radio" name="area3" selected> История и патриотика</label>
-                    <label><input class="award-form__input" type="radio" name="area3" selected> Креатив и творчество</label>
-                    <label><input class="award-form__input" type="radio" name="area3" selected> Медиа и кино</label>
-                    <label><input class="award-form__input" type="radio" name="area3" selected> Образование и наука</label>
-                    <label><input class="award-form__input" type="radio" name="area3" selected> Предпринимательство и инициативы</label>
-                    <label><input class="award-form__input" type="radio" name="area3" selected> Спорт и здоровый образ жизни</label>
-                    <label><input class="award-form__input" type="radio" name="area3" selected> Туризм</label>
-                    <label><input class="award-form__input" type="radio" name="area3" selected> Экология</label>
-                </fieldset>
-                <p class="award-form__row">
-                    <label class="award-form__label" for="geography3">География</label>
-                    <input class="award-form__input" name="geography3" id="geography3" placeholder="Тюменская область" required>
-                </p>
-                <p class="award-form__row">
-                    <label class="award-form__label" for="quantity3">Количество участников</label>
-                    <input class="award-form__input" name="quantity3" id="quantity3" placeholder="Тюменская область" required>
-                </p>
-                <p class="award-form__row">
-                    <label class="award-form__label" for="achievements3">Ключевые достижения</label>
-                    <textarea class="award-form__input" name="achievements3" id="achievements3" placeholder="Заработали 200 000 рублей за день мероприятия" required rows="4"></textarea>
-                </p>
-                <p class="award-form__row">
-                    <label class="award-form__label" for="social3">Социальные сети команды</label>
-                    <textarea class="award-form__input" name="social3" id="social3" placeholder="ВКонтакте, Одноклассники и др. при наличии" rows="3"></textarea>
-                </p>
-                <p class="award-form__row">
-                    <label class="award-form__label" for="media3">Ссылки на публикации в СМИ или социальных медиа</label>
-                    <textarea class="award-form__input" name="media3" id="media3" placeholder="https://72.ru/primer" rows="2"></textarea>
-                </p>
-                <p class="award-form__row">
-                    <label class="award-form__label" for="vk3">Ссылка на видеоролик-визитку во ВКонтакте</label>
-                    <p>При публикации использовать хэштег <code>#млп2022</code>. Продолжительность не более 1,5 минут, горизонтальный формат. Рассказать о себе (ФИО, 1-2 регалии), своих достижениях, своем неформальном сообществе или НКО, ключевых векторах деятельности и инициативах (событиях и проектах) команды. Допускается использование в ролике фото- и видеоматериалов с реализованных ранее инициатив (событий и проектов).</p>
-                    <input class="award-form__input" type="url" name="vk3" id="vk3" placeholder="https://vk.com/video-208240337_456239038">
-                </p>
-            </fieldset>
-        </details>
-
-        <input class="award-form__btn" type="submit" value="Номинировать"><br>
-        <a href="/policy" class="link--solid" target="_blank">Политика конфиденциальности</a>
-    </form>
-</section>
+<a class="nominate__btn" href="{{ 'nominate'|page }}">
+    <img src="{{ 'assets/images/form.jpg'|theme }}" alt="Подать заявку" width="320" height="180" loading="lazy">
+</a>
 
 <div class="award-partners container" id="partners">
     <section>
         <h2 class="section-heading">Учредитель</h2>
         <div class="award-partners__item">
             <a href="https://vk.com/public171568439" target="_blank">
-                <img class="award-partners__logo" width="180" height="100" src="{{ 'assets/images/partners/department.png'|theme }}" alt="Департамент по общественным связям ТО">
+                <img class="award-partners__logo" width="180" height="100" src="{{ 'assets/images/partners/department.png'|theme }}" alt="Департамент по общественным связям ТО" loading="lazy">
             </a>
         </div>
     </section>
@@ -294,12 +90,12 @@ description = "Расскажи о событиях и проектах, ко�
         <ul class="award-partners__list">
             <li class="award-partners__item">
                 <a href="https://vk.com/moyaterritoriya72" target="_blank">
-                    <img class="award-partners__logo" width="180" height="100" src="{{ 'assets/images/partners/mt.svg'|theme }}" alt="Моя территория">
+                    <img class="award-partners__logo" width="180" height="100" src="{{ 'assets/images/partners/mt.svg'|theme }}" alt="Моя территория" loading="lazy">
                 </a>
             </li>
             <li class="award-partners__item">
                 <a href="https://vk.com/mediacentr72" target="_blank">
-                    <img class="award-partners__logo" width="180" height="100" src="{{ 'assets/images/partners/mediacenter.jpg'|theme }}" alt="Медиацентр молодежной политики">
+                    <img class="award-partners__logo" width="180" height="100" src="{{ 'assets/images/partners/mediacenter.jpg'|theme }}" alt="Медиацентр молодежной политики" loading="lazy">
                 </a>
             </li>
         </ul>
