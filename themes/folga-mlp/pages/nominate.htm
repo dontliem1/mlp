@@ -227,7 +227,6 @@ function onSubmitOrderForm()
 	if (callbackForm) {
 		callbackForm.addEventListener('submit', function (e) {
 			e.preventDefault();
-            callbackFormBtn.disabled = true;
 
 			const formElements = /** @type {HTMLCollectionOf<HTMLElement>} */ (callbackForm.children);
 			/** @type {?HTMLButtonElement} */
