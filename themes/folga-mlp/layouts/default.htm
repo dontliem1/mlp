@@ -25,9 +25,7 @@ description = "Default layout"
     {% placeholder head %}
 </head>
 <body class="page-{{ this.page.id }} layout-{{ this.layout.id }}">
-{% if this.page.id is not same as 'home' %}
-    {% partial "header" %}
-{% endif %}
+{% partial "header" %}
 
     {% page %}
 
