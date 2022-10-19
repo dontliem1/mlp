@@ -668,10 +668,13 @@ a.award-form__btn {
     display: inline-block;
 }
 
-.award-form__btn:hover {
+.award-form__btn:enabled:hover {
     background-color: #B9272D;
     border-color: #B9272D;
     color: #fff;
+}
+.award-form__btn:disabled {
+    background-color: #888;
 }
 
 .award-form .link--solid:not(:hover) {
