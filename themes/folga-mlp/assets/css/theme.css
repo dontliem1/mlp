@@ -380,8 +380,16 @@ fieldset ~ details {
 }
 
 @media (min-width: 67em) {
+    .award-hero {
+        padding-top: 0;
+        overflow: visible;
+    }
     .award-hero__text {
         margin-left: 45%;
+        margin-top: -3em;
+    }
+    .award-hero__img {
+       top: 2em;
     }
 }
 
@@ -512,8 +520,9 @@ fieldset ~ details {
 
 /* Criteria */
 .award-criteria {
-    margin-top: 4em;
+    padding-top: 4em;
     margin-bottom: 4em;
+    clear: right;
 }
 
 .award-criteria__list {
@@ -771,12 +780,12 @@ a.award-form__btn {
 
 .award-team__person {
     margin-bottom: 2.5em;
+    max-width: 20em;
 }
 
 .award-team__person_photo {
     width: 100%;
     height: auto;
-    max-width: 20em;
 }
 
 .award-team__person_name {
@@ -796,14 +805,12 @@ a.award-form__btn {
 .award-team__person_link {
     display: inline-block;
     padding: 1em;
-    margin-right: .5em;
+    margin-right: .75em;
+    margin-top: .75em;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
-}
-
-.award-team__person_link:first-of-type {
-    margin-left: 1em;
+    vertical-align: middle;
 }
 
 .award-team__person_link:hover {
@@ -825,12 +832,14 @@ a.award-form__btn {
 @media (min-width: 45em) {
     .award-team__person {
         display: flex;
+        max-width: none;
     }
 
     .award-team__person_photo {
         width: 15em;
         object-fit: cover;
         object-position: center;
+        margin-right: -.1em;
     }
 
     .award-team__person_name {
@@ -842,12 +851,6 @@ a.award-form__btn {
     .award-team__person_job {
         padding-left: 1rem;
         padding-bottom: 1em;
-    }
-
-    .award-team__person_link {
-        margin-left: 1rem;
-        margin-right: 0;
-        padding: 1.5em;
     }
 }
 
@@ -1106,4 +1109,63 @@ a.award-form__btn {
 
 .events__list>li {
     margin-bottom: .5em;
+}
+
+/* Quote */
+.quote {
+    padding-top: 1em;
+    padding-bottom: 2em;
+    max-width: 45rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.quote .award-nav {
+    margin-left: 0;
+    margin-right: 0;
+}
+.quote blockquote {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+.quote__photo {
+    /* grid-column: 2/3;
+    grid-row: 1/4; */
+    vertical-align: middle;
+    max-width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: .5em;
+    margin-left: 1em;
+}
+.quote__author {
+    display: inline-block;
+    max-width: 15em;
+    vertical-align: middle;
+}
+
+@media (min-width: 64em) {
+    .quote {
+        display: grid;
+        max-width: 64em;
+        padding-top: 0;
+        grid-template-rows: auto auto auto;
+    }
+    .quote blockquote {
+        margin: 0;
+    }
+    .quote__photo {
+        grid-column: 2/3;
+        grid-row: 1/4;
+        border-radius: 0;
+        margin: 0;
+        width: 30vw;
+        height: auto;
+    }
+    .quote__author {
+        display: block;
+        max-width: none;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+        margin-top: 0;
+    }
 }

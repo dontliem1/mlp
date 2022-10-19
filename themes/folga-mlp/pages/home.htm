@@ -3,11 +3,49 @@ url = "/"
 layout = "default"
 description = "Расскажи о событиях и проектах, которые ты посетил(а) или организовывала и номинируй их на молодежную лидерскую премию."
 ==
+<header class="quote">
+    {% partial "header" %}
+    <blockquote class="container">
+        <p>«Сегодня в Тюменской области существует более 500 молодежных сообществ. За каждым из них стоит неравнодушный и амбициозный лидер. Ежегодно эти сообщества создают порядка 5 000 социально значимых событий и проектов, которые охватывают важные сферы жизни и деятельности региона. Это и помощь нуждающимся, добровольчество, развитие туристического кластера и предпринимательства, экология, образование и наука. Лидеры молодежных сообществ выступают инициаторами и проводниками новых взглядов, прогрессивных идей. Они становятся драйверами изменений, предлагают новые и нестандартные решения и берут на себя ответственность за их реализацию.</p>
+        <p>В этом году мы впервые даем старт молодежной лидерской премии для лидеров юга Тюменской области, чтобы отметить их вклад в развитие региона. В следующем году планируем масштабировать проект, ведь его главная задача — поддержать лидеров, их смелость, энергию, инициативность и показать жизнь молодежной среды нашей большой Тюменской области».</p>
+    </blockquote>
+    <img class="quote__photo" src="{{ 'assets/images/hero/moor.jpg'|theme }}" alt="" width="96" height="96">
+    <p class="quote__author">Александр Моор, губернатор Тюменской области</p>
+</header>
 <div class="award-hero container">
   <div class="award-hero__pictures js_slideshow">
     {% for i in 1..7 %}
       <div class="award-hero__img js_slideshow__slide" style="background-image: url('{{ ('assets/images/hero/'~i~'.jpg')|theme }}');"></div>
     {% endfor %}
+    {% put scripts %}
+    <script>
+    // Автолистание фотографий
+    const slideWrappers = document.getElementsByClassName('js_slideshow');
+    function startSlideshow(slidesWrapper) {
+        if (!slidesWrapper.children.length) {
+            return;
+        }
+
+        let lastSlide = slidesWrapper.children[slidesWrapper.children.length - 1];
+        lastSlide.classList.add('js_slideshow--active');
+        setInterval(function () {
+        let activeHeroImg = slidesWrapper.querySelector('.js_slideshow--active');
+        let nextActiveHeroImg = activeHeroImg.previousElementSibling ?? lastSlide;
+
+        if (activeHeroImg && nextActiveHeroImg) {
+            nextActiveHeroImg.hidden = false;
+            nextActiveHeroImg.classList.add('js_slideshow--active');
+            activeHeroImg.classList.remove('js_slideshow--active');
+            setTimeout(() => activeHeroImg.hidden = true, 1000);
+            }
+        }, 6000);
+    }
+    for (let i = 0; i < slideWrappers.length; i++) {
+        startSlideshow(slideWrappers[i]);
+    }
+    </script>
+    {% endput %}
+
   </div>
   <div>
     <div class="award-hero__text" id="about">
@@ -53,7 +91,7 @@ description = "Расскажи о событиях и проектах, кот�
   <p>Еще больше информации о конкурсе ты можешь узнать из его <a href="{{ 'assets/pdf/konkurs.pdf'|theme }}" target="_blank" class="link--solid link--pdf">положения</a>.</p>
 </section>
 
-{% if award.experts.people %}
+{# {% if award.experts.people %}
   <section class="award-experts container" id="experts">
     <h2 class="section-heading">Экспертный совет</h2>
     <button class="award-experts__reset" type="button" title="Сбросить фильтр" hidden></button>
@@ -70,7 +108,7 @@ description = "Расскажи о событиях и проектах, кот�
       {% endfor %}
     </ul>
   </section>
-{% endif %}
+{% endif %} #}
 
 <a class="nominate__btn" href="{{ 'nominate'|page }}">
     <img src="{{ 'assets/images/form.jpg'|theme }}" alt="Подать заявку" width="320" height="180" loading="lazy">
@@ -101,31 +139,26 @@ description = "Расскажи о событиях и проектах, кот�
         </ul>
   </section>
 </div>
-{% put scripts %}
-<script>
-  // Автолистание фотографий
-  const slideWrappers = document.getElementsByClassName('js_slideshow');
-  function startSlideshow(slidesWrapper) {
-    if (!slidesWrapper.children.length) {
-        return;
-    }
-
-    let lastSlide = slidesWrapper.children[slidesWrapper.children.length - 1];
-    lastSlide.classList.add('js_slideshow--active');
-    setInterval(function () {
-      let activeHeroImg = slidesWrapper.querySelector('.js_slideshow--active');
-      let nextActiveHeroImg = activeHeroImg.previousElementSibling ?? lastSlide;
-
-      if (activeHeroImg && nextActiveHeroImg) {
-        nextActiveHeroImg.hidden = false;
-        nextActiveHeroImg.classList.add('js_slideshow--active');
-        activeHeroImg.classList.remove('js_slideshow--active');
-        setTimeout(() => activeHeroImg.hidden = true, 1000);
-        }
-    }, 6000);
-  }
-  for (let i = 0; i < slideWrappers.length; i++) {
-    startSlideshow(slideWrappers[i]);
-  }
-</script>
-{% endput %}
+<div class="award-team container">
+<h2 class="section-heading">Команда проекта</h2>
+<ul class="award-team__list">
+    <li class="award-team__person">
+        <img class="award-team__person_photo" src="{{ 'assets/images/team/fedorenko.jpg'|theme }}" alt="" width="300" height="300" loading="lazy">
+        <div class="award-criteria__item">
+            <b class="award-criteria__title">Мария Федоренко</b>
+            <p class="award-criteria__description">Руководитель проекта, социальный продюсер<br>
+            <a href="https://vk.com/fedorenkomary" class="award-team__person_link award-team__person_link--vk"><span class="visually-hidden">ВКонтакте</span></a>
+            <a href="mailto:fedorenko.mary72@gmail.com" class="award-team__person_link award-team__person_link--email"><span class="visually-hidden">Электронная почта</span></a></p>
+        </div>
+    </li>
+    <li class="award-team__person">
+        <img class="award-team__person_photo" src="{{ 'assets/images/team/karachev.jpg'|theme }}" alt="" width="300" height="300" loading="lazy">
+        <div class="award-criteria__item">
+            <b class="award-criteria__title">Иван Карачев</b>
+            <p class="award-criteria__description">Программный продюсер проекта, исследователь-аналитик<br>
+            <a href="https://vk.com/karachev_iv" class="award-team__person_link award-team__person_link--vk"><span class="visually-hidden">ВКонтакте</span></a>
+            <a href="mailto:karacheviv1995@gmail.com" class="award-team__person_link award-team__person_link--email"><span class="visually-hidden">Электронная почта</span></a></p>
+        </div>
+    </li>
+</ul>
+</div>

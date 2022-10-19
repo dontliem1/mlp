@@ -8,23 +8,29 @@ description = "Default layout"
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ this.page.title }}</title>
     <meta name="description" content="{{ this.page.meta_description }}">
-    {% block head %}{% endblock %}
 
-    <meta property="og:image" content="{{award.settings.pictures[0].src}}"/>
+    <meta property="og:image" content="{{ 'assets/images/theme-preview.png'|theme }}"/>
     <meta property="og:locale" content="ru"/>
     <meta name="twitter:card" content="summary_large_image">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ 'assets/css/theme.css' | theme }}">
-    <link rel="icon" type="image/svg+xml" href="{{ 'assets/images/favicon.svg'|theme }}">
-    <link rel="icon" href="{{ 'assets/images/favicon.ico'|theme }}">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ 'assets/images/apple-touch-icon.png' | theme }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ 'assets/images/favicon-32x32.png' | theme }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ 'assets/images/favicon-16x16.png' | theme }}">
+    <link rel="shortcut icon" href="{{ 'assets/images/favicon.ico' | theme }}">
+    {% styles %}
+    {% placeholder head %}
 </head>
 <body class="page-{{ this.page.id }} layout-{{ this.layout.id }}">
-{% partial "site/header" %}
+{% if this.page.id is not same as 'home' %}
+    {% partial "header" %}
+{% endif %}
 
     {% page %}
 
-{% partial "site/footer" %}
+{% partial "footer" %}
 </body>
 </html>
