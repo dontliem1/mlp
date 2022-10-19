@@ -6,7 +6,12 @@ description = "Расскажи о событиях и проектах, кот�
 <?php
 function onSubmitOrderForm()
 {
-    Mail::sendTo('YouthLeaderAward@yandex.ru', 'folga.mlp::mail.nominate', ['name' => post('name')]);
+    $params = [];
+    $keys = ['name', 'birthday', 'city', 'job', 'contact', 'achievements', 'level', 'title', 'team', 'social', 'project1', 'area1', 'geography1', 'quantity1', 'achievements1', 'social1', 'media1', 'vk1', 'project2', 'area2', 'geography2', 'quantity2', 'achievements2', 'social2', 'media2', 'vk2', 'project3', 'area3', 'geography3', 'quantity3', 'achievements3', 'social3', 'media3', 'vk3'];
+    foreach ($keys as $key) {
+        $params[$key] = post($key);
+    }
+    Mail::sendTo('YouthLeaderAward@yandex.ru', 'folga.mlp::mail.nominate', $params);
 }
 ?>
 ==
