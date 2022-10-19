@@ -6,7 +6,7 @@ description = "Расскажи о событиях и проектах, кот�
 <?php
 function onSubmitOrderForm()
 {
-    Mail::rawTo('dontliem1@gmail.com', json_encode($_POST, JSON_UNESCAPED_UNICODE));
+    Mail::sendTo('YouthLeaderAward@yandex.ru', 'folga.mlp::mail.nominate', ['name' => post('name')]);
 }
 ?>
 ==
@@ -20,8 +20,8 @@ function onSubmitOrderForm()
                 <input class="award-form__input" name="name" id="name" placeholder="Иванова Мария Сергеевна" required>
             </p>
             <p class="award-form__row">
-                <label class="award-form__label" for="date">Дата рождения</label>
-                <input class="award-form__input" type="date" name="date" id="date" max="{{ 'now'|date('Y-m-d') }}" required>
+                <label class="award-form__label" for="birthday">Дата рождения</label>
+                <input class="award-form__input" type="date" name="birthday" id="birthday" max="{{ 'now'|date('Y-m-d') }}" required>
             </p>
             <p class="award-form__row">
                 <label class="award-form__label" for="city">Место проживания</label>
@@ -41,8 +41,8 @@ function onSubmitOrderForm()
             </p>
             <fieldset class="award-form__row">
                 <legend class="award-form__label">Уровень проектного менеджмента</legend>
-                <label><input class="award-form__input" name="level" type="radio" selected><b>Профессиональный общественник / профи</b><br>неформальное сообщество или НКО, не менее 2-х лет опыта реализации социально-значимых инициатив; опыт реализации инициатив за счет средств всероссийских грантовых конкурсов</label>
-                <label><input class="award-form__input" name="level" type="radio"><b>Начинающий общественник / дебютант</b><br>неформальное сообщество или НКО, менее 2-х лет опыта реализации социально-значимых инициатив; опыт реализации инициатив за счет грантовой поддержки региона, без грантовой поддержки</label>
+                <label><input class="award-form__input" name="level" type="radio" selected value="professional"><b>Профессиональный общественник / профи</b><br>неформальное сообщество или НКО, не менее 2-х лет опыта реализации социально-значимых инициатив; опыт реализации инициатив за счет средств всероссийских грантовых конкурсов</label>
+                <label><input class="award-form__input" name="level" type="radio" value="beginner"><b>Начинающий общественник / дебютант</b><br>неформальное сообщество или НКО, менее 2-х лет опыта реализации социально-значимых инициатив; опыт реализации инициатив за счет грантовой поддержки региона, без грантовой поддержки</label>
             </fieldset>
         </fieldset>
 
@@ -62,54 +62,54 @@ function onSubmitOrderForm()
             </p>
         </fieldset>
 
-            <fieldset>
-        <legend class="section-heading">Событие или проект</legend>
-                <p class="award-form__row">
-                    <label class="award-form__label" for="project1">Название</label>
-                    <input class="award-form__input" name="project1" id="project1" placeholder="Классное мероприятие" required>
-                </p>
-                <fieldset class="award-form__row">
-                    <legend class="award-form__label">Направление</legend>
-                    <label><input class="award-form__input" type="radio" name="area1" selected> Дети и родители</label>
-                    <label><input class="award-form__input" type="radio" name="area1" selected> Дети</label>
-                    <label><input class="award-form__input" type="radio" name="area1" selected> Добровольчество и благотворительность</label>
-                    <label><input class="award-form__input" type="radio" name="area1" selected> История и патриотика</label>
-                    <label><input class="award-form__input" type="radio" name="area1" selected> Креатив и творчество</label>
-                    <label><input class="award-form__input" type="radio" name="area1" selected> Медиа и кино</label>
-                    <label><input class="award-form__input" type="radio" name="area1" selected> Образование и наука</label>
-                    <label><input class="award-form__input" type="radio" name="area1" selected> Предпринимательство и инициативы</label>
-                    <label><input class="award-form__input" type="radio" name="area1" selected> Спорт и здоровый образ жизни</label>
-                    <label><input class="award-form__input" type="radio" name="area1" selected> Туризм</label>
-                    <label><input class="award-form__input" type="radio" name="area1" selected> Экология</label>
-                </fieldset>
-                <p class="award-form__row">
-                    <label class="award-form__label" for="geography1">География</label>
-                    <input class="award-form__input" name="geography1" id="geography1" placeholder="Тюменская область" required>
-                </p>
-                <p class="award-form__row">
-                    <label class="award-form__label" for="quantity1">Количество участников</label>
-                    <input class="award-form__input" name="quantity1" id="quantity1" placeholder="Тюменская область" required>
-                </p>
-                <p class="award-form__row">
-                    <label class="award-form__label" for="achievements1">Ключевые достижения</label>
-                    <textarea class="award-form__input" name="achievements1" id="achievements1" placeholder="Заработали 200 000 рублей за день мероприятия" required rows="4"></textarea>
-                </p>
-                <p class="award-form__row">
-                    <label class="award-form__label" for="social1">Социальные сети команды</label>
-                    <textarea class="award-form__input" name="social1" id="social1" placeholder="ВКонтакте, Одноклассники и др. при наличии" rows="3"></textarea>
-                </p>
-                <p class="award-form__row">
-                    <label class="award-form__label" for="media1">Ссылки на публикации в СМИ или социальных медиа</label>
-                    <textarea class="award-form__input" name="media1" id="media1" placeholder="https://72.ru/primer" rows="2"></textarea>
-                </p>
-                <div class="award-form__row">
-                    <label class="award-form__label" for="vk1">Ссылка на видеоролик-визитку во ВКонтакте</label>
-                    <p>При публикации использовать хэштег <code>#млп2022</code>. Продолжительность не более 1,5 минут, горизонтальный формат. Рассказать о себе (ФИО, 1-2 регалии), своих достижениях, своем неформальном сообществе или НКО, ключевых векторах деятельности и инициативах (событиях и проектах) команды. Допускается использование в ролике фото- и видеоматериалов с реализованных ранее инициатив (событий и проектов).</p>
-                    <input class="award-form__input" type="url" name="vk1" id="vk1" placeholder="https://vk.com/video-208240117_456239018">
-                </div>
+        <fieldset>
+            <legend class="section-heading">Событие или проект</legend>
+            <p class="award-form__row">
+                <label class="award-form__label" for="project1">Название</label>
+                <input class="award-form__input" name="project1" id="project1" placeholder="Классное мероприятие" required>
+            </p>
+            <fieldset class="award-form__row">
+                <legend class="award-form__label">Направление</legend>
+                <label><input class="award-form__input" type="radio" name="area1" selected value="family"> Дети и родители</label>
+                <label><input class="award-form__input" type="radio" name="area1" selected value="children"> Дети</label>
+                <label><input class="award-form__input" type="radio" name="area1" selected value="charity"> Добровольчество и благотворительность</label>
+                <label><input class="award-form__input" type="radio" name="area1" selected value="history"> История и патриотика</label>
+                <label><input class="award-form__input" type="radio" name="area1" selected value="creative"> Креатив и творчество</label>
+                <label><input class="award-form__input" type="radio" name="area1" selected value="media"> Медиа и кино</label>
+                <label><input class="award-form__input" type="radio" name="area1" selected value="science"> Образование и наука</label>
+                <label><input class="award-form__input" type="radio" name="area1" selected value="business"> Предпринимательство и инициативы</label>
+                <label><input class="award-form__input" type="radio" name="area1" selected value="sport"> Спорт и здоровый образ жизни</label>
+                <label><input class="award-form__input" type="radio" name="area1" selected value="tourism"> Туризм</label>
+                <label><input class="award-form__input" type="radio" name="area1" selected value="ecology"> Экология</label>
             </fieldset>
+            <p class="award-form__row">
+                <label class="award-form__label" for="geography1">География</label>
+                <input class="award-form__input" name="geography1" id="geography1" placeholder="Тюменская область" required>
+            </p>
+            <p class="award-form__row">
+                <label class="award-form__label" for="quantity1">Количество участников</label>
+                <input class="award-form__input" name="quantity1" id="quantity1" placeholder="Тюменская область" required>
+            </p>
+            <p class="award-form__row">
+                <label class="award-form__label" for="achievements1">Ключевые достижения</label>
+                <textarea class="award-form__input" name="achievements1" id="achievements1" placeholder="Заработали 200 000 рублей за день мероприятия" required rows="4"></textarea>
+            </p>
+            <p class="award-form__row">
+                <label class="award-form__label" for="social1">Социальные сети команды</label>
+                <textarea class="award-form__input" name="social1" id="social1" placeholder="ВКонтакте, Одноклассники и др. при наличии" rows="3"></textarea>
+            </p>
+            <p class="award-form__row">
+                <label class="award-form__label" for="media1">Ссылки на публикации в СМИ или социальных медиа</label>
+                <textarea class="award-form__input" name="media1" id="media1" placeholder="https://72.ru/primer" rows="2"></textarea>
+            </p>
+            <div class="award-form__row">
+                <label class="award-form__label" for="vk1">Ссылка на видеоролик-визитку во ВКонтакте</label>
+                <p>При публикации использовать хэштег <code>#млп2022</code>. Продолжительность не более 1,5 минут, горизонтальный формат. Рассказать о себе (ФИО, 1-2 регалии), своих достижениях, своем неформальном сообществе или НКО, ключевых векторах деятельности и инициативах (событиях и проектах) команды. Допускается использование в ролике фото- и видеоматериалов с реализованных ранее инициатив (событий и проектов).</p>
+                <input class="award-form__input" type="url" name="vk1" id="vk1" placeholder="https://vk.com/video-208240117_456239018" required>
+            </div>
+        </fieldset>
         <details>
-        <summary>Второй проект (необязательно)</summary>
+            <summary>Второй проект (необязательно)</summary>
             <fieldset>
                 <p class="award-form__row">
                     <label class="award-form__label" for="project2">Название</label>
@@ -117,17 +117,17 @@ function onSubmitOrderForm()
                 </p>
                 <fieldset class="award-form__row">
                     <legend class="award-form__label">Направление</legend>
-                    <label><input class="award-form__input" type="radio" name="area2" selected> Дети и родители</label>
-                    <label><input class="award-form__input" type="radio" name="area2" selected> Дети</label>
-                    <label><input class="award-form__input" type="radio" name="area2" selected> Добровольчество и благотворительность</label>
-                    <label><input class="award-form__input" type="radio" name="area2" selected> История и патриотика</label>
-                    <label><input class="award-form__input" type="radio" name="area2" selected> Креатив и творчество</label>
-                    <label><input class="award-form__input" type="radio" name="area2" selected> Медиа и кино</label>
-                    <label><input class="award-form__input" type="radio" name="area2" selected> Образование и наука</label>
-                    <label><input class="award-form__input" type="radio" name="area2" selected> Предпринимательство и инициативы</label>
-                    <label><input class="award-form__input" type="radio" name="area2" selected> Спорт и здоровый образ жизни</label>
-                    <label><input class="award-form__input" type="radio" name="area2" selected> Туризм</label>
-                    <label><input class="award-form__input" type="radio" name="area2" selected> Экология</label>
+                    <label><input class="award-form__input" type="radio" name="area2" selected value="family"> Дети и родители</label>
+                    <label><input class="award-form__input" type="radio" name="area2" selected value="children"> Дети</label>
+                    <label><input class="award-form__input" type="radio" name="area2" selected value="charity"> Добровольчество и благотворительность</label>
+                    <label><input class="award-form__input" type="radio" name="area2" selected value="history"> История и патриотика</label>
+                    <label><input class="award-form__input" type="radio" name="area2" selected value="creative"> Креатив и творчество</label>
+                    <label><input class="award-form__input" type="radio" name="area2" selected value="media"> Медиа и кино</label>
+                    <label><input class="award-form__input" type="radio" name="area2" selected value="science"> Образование и наука</label>
+                    <label><input class="award-form__input" type="radio" name="area2" selected value="business"> Предпринимательство и инициативы</label>
+                    <label><input class="award-form__input" type="radio" name="area2" selected value="sport"> Спорт и здоровый образ жизни</label>
+                    <label><input class="award-form__input" type="radio" name="area2" selected value="tourism"> Туризм</label>
+                    <label><input class="award-form__input" type="radio" name="area2" selected value="ecology"> Экология</label>
                 </fieldset>
                 <p class="award-form__row">
                     <label class="award-form__label" for="geography2">География</label>
@@ -165,17 +165,17 @@ function onSubmitOrderForm()
                 </p>
                 <fieldset class="award-form__row">
                     <legend class="award-form__label">Направление</legend>
-                    <label><input class="award-form__input" type="radio" name="area3" selected> Дети и родители</label>
-                    <label><input class="award-form__input" type="radio" name="area3" selected> Дети</label>
-                    <label><input class="award-form__input" type="radio" name="area3" selected> Добровольчество и благотворительность</label>
-                    <label><input class="award-form__input" type="radio" name="area3" selected> История и патриотика</label>
-                    <label><input class="award-form__input" type="radio" name="area3" selected> Креатив и творчество</label>
-                    <label><input class="award-form__input" type="radio" name="area3" selected> Медиа и кино</label>
-                    <label><input class="award-form__input" type="radio" name="area3" selected> Образование и наука</label>
-                    <label><input class="award-form__input" type="radio" name="area3" selected> Предпринимательство и инициативы</label>
-                    <label><input class="award-form__input" type="radio" name="area3" selected> Спорт и здоровый образ жизни</label>
-                    <label><input class="award-form__input" type="radio" name="area3" selected> Туризм</label>
-                    <label><input class="award-form__input" type="radio" name="area3" selected> Экология</label>
+                    <label><input class="award-form__input" type="radio" name="area3" selected value="family"> Дети и родители</label>
+                    <label><input class="award-form__input" type="radio" name="area3" selected value="children"> Дети</label>
+                    <label><input class="award-form__input" type="radio" name="area3" selected value="charity"> Добровольчество и благотворительность</label>
+                    <label><input class="award-form__input" type="radio" name="area3" selected value="history"> История и патриотика</label>
+                    <label><input class="award-form__input" type="radio" name="area3" selected value="creative"> Креатив и творчество</label>
+                    <label><input class="award-form__input" type="radio" name="area3" selected value="media"> Медиа и кино</label>
+                    <label><input class="award-form__input" type="radio" name="area3" selected value="science"> Образование и наука</label>
+                    <label><input class="award-form__input" type="radio" name="area3" selected value="business"> Предпринимательство и инициативы</label>
+                    <label><input class="award-form__input" type="radio" name="area3" selected value="sport"> Спорт и здоровый образ жизни</label>
+                    <label><input class="award-form__input" type="radio" name="area3" selected value="tourism"> Туризм</label>
+                    <label><input class="award-form__input" type="radio" name="area3" selected value="ecology"> Экология</label>
                 </fieldset>
                 <p class="award-form__row">
                     <label class="award-form__label" for="geography3">География</label>
@@ -207,7 +207,7 @@ function onSubmitOrderForm()
 
         {{ form_button('Номинировать', { class: 'award-form__btn', type: 'submit' }) }}
         <br>
-        <a href="/policy" class="link--solid" target="_blank">Политика конфиденциальности</a>
+        <a href="{{ 'policy'|page }}" class="link--solid" target="_blank">Политика конфиденциальности</a>
 			<div class="popup__success-message success-message form__message--success" hidden>
 				<h3 class="success-message__title">Спасибо!</h3>
 				<p class="success-message__text">Мы скоро с вами свяжемся.</p>
