@@ -182,7 +182,7 @@ fieldset ~ details {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    margin-top: .5em;
+    margin-top: 1em;
     margin-bottom: 1em;
 }
 
@@ -573,6 +573,8 @@ fieldset ~ details {
     color: #fff;
     border-bottom: .5em solid;
     margin-bottom: 4em;
+    padding: 0;
+    position: relative;
 }
 
 .award-form__heading {
@@ -653,7 +655,14 @@ textarea.award-form__input {
     margin-top: .5em;
     display: block;
 }
-
+.page-home .award-form__btn {
+    background-color: #333;
+    bottom: 15%;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    z-index: 1;
+}
 .award-form__btn {
     background-color: rgba(255, 0, 0, 0);
     border: .15em solid;
@@ -696,11 +705,6 @@ a.award-form__btn {
 }
 
 @media (min-width: 45em) {
-    .award-form {
-        margin-left: 1.5em;
-        margin-right: 1.5em;
-    }
-
     .award-form__btn {
         font-size: 125%;
     }
@@ -788,6 +792,9 @@ a.award-form__btn {
 }
 
 .award-team__person_photo {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: top;
     width: 100%;
     height: auto;
 }
@@ -842,7 +849,7 @@ a.award-form__btn {
     .award-team__person_photo {
         width: 15em;
         object-fit: cover;
-        object-position: center;
+        object-position: top;
         margin-right: -.1em;
     }
 

@@ -37,7 +37,7 @@ function onSubmitOrderForm()
                 <input class="award-form__input" name="job" id="job" placeholder="ООО «Компания», менеджер" required>
             </p>
             <p class="award-form__row">
-                <label class="award-form__label" for="contact">Контактные данные</label>
+                <label class="award-form__label" for="contact">Контактные данные (мобильный телефон, ссылка на ВКонтакте)</label>
                 <textarea class="award-form__input" name="contact" id="contact" placeholder="+7 999 999-99-99, https://vk.me/1" rows="2" required></textarea>
             </p>
             <p class="award-form__row">
@@ -46,7 +46,7 @@ function onSubmitOrderForm()
             </p>
             <fieldset class="award-form__row">
                 <legend class="award-form__label">Уровень проектного менеджмента</legend>
-                <label><input class="award-form__input" name="level" type="radio" selected value="professional"><b>Профессиональный общественник / профи</b><br>неформальное сообщество или НКО, не менее 2-х лет опыта реализации социально-значимых инициатив; опыт реализации инициатив за счет средств всероссийских грантовых конкурсов</label>
+                <label><input class="award-form__input" name="level" type="radio" checked value="professional"><b>Профессиональный общественник / профи</b><br>неформальное сообщество или НКО, не менее 2-х лет опыта реализации социально-значимых инициатив; опыт реализации инициатив за счет средств всероссийских грантовых конкурсов</label>
                 <label><input class="award-form__input" name="level" type="radio" value="beginner"><b>Начинающий общественник / дебютант</b><br>неформальное сообщество или НКО, менее 2-х лет опыта реализации социально-значимых инициатив; опыт реализации инициатив за счет грантовой поддержки региона, без грантовой поддержки</label>
             </fieldset>
         </fieldset>
@@ -70,22 +70,22 @@ function onSubmitOrderForm()
         <fieldset>
             <legend class="section-heading">Событие или проект</legend>
             <p class="award-form__row">
-                <label class="award-form__label" for="project1">Название</label>
+                <label class="award-form__label" for="project1">Полное наименование события / проекта</label>
                 <input class="award-form__input" name="project1" id="project1" placeholder="Классное мероприятие" required>
             </p>
             <fieldset class="award-form__row">
                 <legend class="award-form__label">Направление</legend>
-                <label><input class="award-form__input" type="radio" name="area1" selected value="family"> Дети и родители</label>
-                <label><input class="award-form__input" type="radio" name="area1" selected value="children"> Дети</label>
-                <label><input class="award-form__input" type="radio" name="area1" selected value="charity"> Добровольчество и благотворительность</label>
-                <label><input class="award-form__input" type="radio" name="area1" selected value="history"> История и патриотика</label>
-                <label><input class="award-form__input" type="radio" name="area1" selected value="creative"> Креатив и творчество</label>
-                <label><input class="award-form__input" type="radio" name="area1" selected value="media"> Медиа и кино</label>
-                <label><input class="award-form__input" type="radio" name="area1" selected value="science"> Образование и наука</label>
-                <label><input class="award-form__input" type="radio" name="area1" selected value="business"> Предпринимательство и инициативы</label>
-                <label><input class="award-form__input" type="radio" name="area1" selected value="sport"> Спорт и здоровый образ жизни</label>
-                <label><input class="award-form__input" type="radio" name="area1" selected value="tourism"> Туризм</label>
-                <label><input class="award-form__input" type="radio" name="area1" selected value="ecology"> Экология</label>
+                <label><input class="award-form__input" type="radio" name="area1" checked value="family"> Дети и родители</label>
+                <label><input class="award-form__input" type="radio" name="area1" value="children"> Дети</label>
+                <label><input class="award-form__input" type="radio" name="area1" value="charity"> Добровольчество и благотворительность</label>
+                <label><input class="award-form__input" type="radio" name="area1" value="history"> История и патриотика</label>
+                <label><input class="award-form__input" type="radio" name="area1" value="creative"> Креатив и творчество</label>
+                <label><input class="award-form__input" type="radio" name="area1" value="media"> Медиа и кино</label>
+                <label><input class="award-form__input" type="radio" name="area1" value="science"> Образование и наука</label>
+                <label><input class="award-form__input" type="radio" name="area1" value="business"> Предпринимательство и инициативы</label>
+                <label><input class="award-form__input" type="radio" name="area1" value="sport"> Спорт и здоровый образ жизни</label>
+                <label><input class="award-form__input" type="radio" name="area1" value="tourism"> Туризм</label>
+                <label><input class="award-form__input" type="radio" name="area1" value="ecology"> Экология</label>
             </fieldset>
             <p class="award-form__row">
                 <label class="award-form__label" for="geography1">География</label>
@@ -122,17 +122,17 @@ function onSubmitOrderForm()
                 </p>
                 <fieldset class="award-form__row">
                     <legend class="award-form__label">Направление</legend>
-                    <label><input class="award-form__input" type="radio" name="area2" selected value="family"> Дети и родители</label>
-                    <label><input class="award-form__input" type="radio" name="area2" selected value="children"> Дети</label>
-                    <label><input class="award-form__input" type="radio" name="area2" selected value="charity"> Добровольчество и благотворительность</label>
-                    <label><input class="award-form__input" type="radio" name="area2" selected value="history"> История и патриотика</label>
-                    <label><input class="award-form__input" type="radio" name="area2" selected value="creative"> Креатив и творчество</label>
-                    <label><input class="award-form__input" type="radio" name="area2" selected value="media"> Медиа и кино</label>
-                    <label><input class="award-form__input" type="radio" name="area2" selected value="science"> Образование и наука</label>
-                    <label><input class="award-form__input" type="radio" name="area2" selected value="business"> Предпринимательство и инициативы</label>
-                    <label><input class="award-form__input" type="radio" name="area2" selected value="sport"> Спорт и здоровый образ жизни</label>
-                    <label><input class="award-form__input" type="radio" name="area2" selected value="tourism"> Туризм</label>
-                    <label><input class="award-form__input" type="radio" name="area2" selected value="ecology"> Экология</label>
+                    <label><input class="award-form__input" type="radio" name="area2" checked value="family"> Дети и родители</label>
+                    <label><input class="award-form__input" type="radio" name="area2" value="children"> Дети</label>
+                    <label><input class="award-form__input" type="radio" name="area2" value="charity"> Добровольчество и благотворительность</label>
+                    <label><input class="award-form__input" type="radio" name="area2" value="history"> История и патриотика</label>
+                    <label><input class="award-form__input" type="radio" name="area2" value="creative"> Креатив и творчество</label>
+                    <label><input class="award-form__input" type="radio" name="area2" value="media"> Медиа и кино</label>
+                    <label><input class="award-form__input" type="radio" name="area2" value="science"> Образование и наука</label>
+                    <label><input class="award-form__input" type="radio" name="area2" value="business"> Предпринимательство и инициативы</label>
+                    <label><input class="award-form__input" type="radio" name="area2" value="sport"> Спорт и здоровый образ жизни</label>
+                    <label><input class="award-form__input" type="radio" name="area2" value="tourism"> Туризм</label>
+                    <label><input class="award-form__input" type="radio" name="area2" value="ecology"> Экология</label>
                 </fieldset>
                 <p class="award-form__row">
                     <label class="award-form__label" for="geography2">География</label>
@@ -170,17 +170,17 @@ function onSubmitOrderForm()
                 </p>
                 <fieldset class="award-form__row">
                     <legend class="award-form__label">Направление</legend>
-                    <label><input class="award-form__input" type="radio" name="area3" selected value="family"> Дети и родители</label>
-                    <label><input class="award-form__input" type="radio" name="area3" selected value="children"> Дети</label>
-                    <label><input class="award-form__input" type="radio" name="area3" selected value="charity"> Добровольчество и благотворительность</label>
-                    <label><input class="award-form__input" type="radio" name="area3" selected value="history"> История и патриотика</label>
-                    <label><input class="award-form__input" type="radio" name="area3" selected value="creative"> Креатив и творчество</label>
-                    <label><input class="award-form__input" type="radio" name="area3" selected value="media"> Медиа и кино</label>
-                    <label><input class="award-form__input" type="radio" name="area3" selected value="science"> Образование и наука</label>
-                    <label><input class="award-form__input" type="radio" name="area3" selected value="business"> Предпринимательство и инициативы</label>
-                    <label><input class="award-form__input" type="radio" name="area3" selected value="sport"> Спорт и здоровый образ жизни</label>
-                    <label><input class="award-form__input" type="radio" name="area3" selected value="tourism"> Туризм</label>
-                    <label><input class="award-form__input" type="radio" name="area3" selected value="ecology"> Экология</label>
+                    <label><input class="award-form__input" type="radio" name="area3" checked value="family"> Дети и родители</label>
+                    <label><input class="award-form__input" type="radio" name="area3" value="children"> Дети</label>
+                    <label><input class="award-form__input" type="radio" name="area3" value="charity"> Добровольчество и благотворительность</label>
+                    <label><input class="award-form__input" type="radio" name="area3" value="history"> История и патриотика</label>
+                    <label><input class="award-form__input" type="radio" name="area3" value="creative"> Креатив и творчество</label>
+                    <label><input class="award-form__input" type="radio" name="area3" value="media"> Медиа и кино</label>
+                    <label><input class="award-form__input" type="radio" name="area3" value="science"> Образование и наука</label>
+                    <label><input class="award-form__input" type="radio" name="area3" value="business"> Предпринимательство и инициативы</label>
+                    <label><input class="award-form__input" type="radio" name="area3" value="sport"> Спорт и здоровый образ жизни</label>
+                    <label><input class="award-form__input" type="radio" name="area3" value="tourism"> Туризм</label>
+                    <label><input class="award-form__input" type="radio" name="area3" value="ecology"> Экология</label>
                 </fieldset>
                 <p class="award-form__row">
                     <label class="award-form__label" for="geography3">География</label>
