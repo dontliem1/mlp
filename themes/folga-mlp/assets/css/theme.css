@@ -53,6 +53,7 @@ fieldset {
     border: 0;
 }
 
+.award-hero__title,
 .award-nav__logo,
 .section-heading,
 h1,
@@ -380,8 +381,16 @@ fieldset ~ details {
 }
 
 @media (min-width: 67em) {
+    .award-hero {
+        padding-top: 0;
+        overflow: visible;
+    }
     .award-hero__text {
         margin-left: 45%;
+        margin-top: -3em;
+    }
+    .award-hero__img {
+       top: 2em;
     }
 }
 
@@ -1108,75 +1117,63 @@ a.award-form__btn {
 
 /* Quote */
 .quote {
-    margin-top: 2em;
-    margin-bottom: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 45rem;
+    padding-bottom: 2em;
+    padding-top: 1em;
 }
 .quote .award-nav {
     margin-left: 0;
     margin-right: 0;
 }
 .quote blockquote {
-    margin: 1.5em 0;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
 }
 .quote__photo {
-    /* grid-column: 2/3;
-    grid-row: 1/4; */
     vertical-align: middle;
     max-width: 100%;
     border-radius: 50%;
     object-fit: cover;
     margin-right: .5em;
+    margin-left: 1em;
 }
 .quote__author {
     display: inline-block;
-    max-width: 11em;
+    max-width: 15em;
     vertical-align: middle;
+}
+.quote__title {
+    text-transform: none;
+    font-size: 130%;
+    font-weight: 700;
 }
 
 @media (min-width: 67em) {
     .quote {
         display: grid;
-        column-gap: 2em;
-        position: relative;
-        grid-template-columns: 2fr 1fr;
-        align-items: center;
+        grid-template-rows: auto auto auto;
+        max-width: 64em;
+        padding-top: 0;
     }
-    .quote::before,
-    .quote::after {
-        content: '';
-        padding: 1em;
-        left: 0;
-        position: absolute;
-        border-left: 0.25em solid;
-        display: inline-block;
-    }
-    .quote::before {
-        top: 0;
-        border-top: 0.25em solid;
-    }
-    .quote::after {
-        bottom: 0;
-        border-bottom: 0.25em solid;
+    .quote blockquote {
+        font-size: 87.5%;
+        margin: 0;
     }
     .quote__photo {
         grid-column: 2/3;
-        grid-row: 1/4;
+        grid-row: 1/5;
         border-radius: 0;
         margin: 0;
-        width: 100%;
+        width: 30vw;
         height: auto;
-        align-self: stretch;
     }
     .quote__author {
         display: block;
         max-width: none;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
         margin-top: 0;
-        margin-bottom: 0;
-        padding: 0.5em 1em;
-        background-color: #B9272D;
-        color: #fff;
-        font-weight: 700;
-        font-size: 1.25em;
-        margin-right: -2rem;
     }
 }
