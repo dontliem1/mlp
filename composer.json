@@ -29,11 +29,11 @@
         "source": "https://github.com/wintercms/winter"
     },
     "require": {
-        "php": "^8.0.2",
-        "winter/storm": "~1.2.0",
-        "winter/wn-system-module": "~1.2.0",
-        "winter/wn-backend-module": "~1.2.0",
-        "winter/wn-cms-module": "~1.2.0",
+        "php": "^8.1.4",
+        "winter/storm": "~1.2.1",
+        "winter/wn-system-module": "~1.2.1",
+        "winter/wn-backend-module": "~1.2.1",
+        "winter/wn-cms-module": "~1.2.1",
         "laravel/framework": "^9.1",
         "wikimedia/composer-merge-plugin": "~2.0.1"
     },

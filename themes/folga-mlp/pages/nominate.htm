@@ -7,7 +7,7 @@ description = "Расскажи о событиях и проектах, кот�
 function onSubmitOrderForm()
 {
     $params = [];
-    $keys = ['name', 'birthday', 'city', 'job', 'contact', 'achievements', 'level', 'title', 'team', 'social', 'project1', 'area1', 'geography1', 'quantity1', 'achievements1', 'social1', 'media1', 'vk1', 'project2', 'area2', 'geography2', 'quantity2', 'achievements2', 'social2', 'media2', 'vk2', 'project3', 'area3', 'geography3', 'quantity3', 'achievements3', 'social3', 'media3', 'vk3'];
+    $keys = ['name', 'birthday', 'city', 'job', 'contact', 'achievements', 'level', 'title', 'team', 'social', 'project1', 'start1', 'finish1', 'area1', 'geography1', 'quantity1', 'achievements1', 'social1', 'media1', 'vk1', 'project2', 'start2', 'finish2', 'area2', 'geography2', 'quantity2', 'achievements2', 'social2', 'media2', 'vk2', 'project3', 'start3', 'finish3', 'area3', 'geography3', 'quantity3', 'achievements3', 'social3', 'media3', 'vk3'];
     foreach ($keys as $key) {
         $params[$key] = post($key);
     }
@@ -71,8 +71,12 @@ function onSubmitOrderForm()
             <legend class="section-heading">Инициатива (событие или проект)</legend>
             <p class="award-form__row">
                 <label class="award-form__label" for="project1">Полное наименование события / проекта</label>
-                <input class="award-form__input" name="project1" id="project1" placeholder="Классное мероприятие" required>
+                <input class="award-form__input" name="project1" id="project1" required>
             </p>
+            <fieldset>
+                <legend class="award-form__label">Сроки проведения проекта</legend>
+                <input class="award-form__input award-form__input--inline" type="date" name="start1" aria-label="Начало" required> — <input class="award-form__input" type="date" name="finish1" aria-label="Конец" required>
+            </fieldset>
             <fieldset class="award-form__row">
                 <legend class="award-form__label">Направление</legend>
                 <label><input class="award-form__input" type="radio" name="area1" checked value="family"> Дети и родители</label>
@@ -116,9 +120,13 @@ function onSubmitOrderForm()
             <summary>Вторая инициатива (событие или проект)</summary>
             <fieldset>
                 <p class="award-form__row">
-                    <label class="award-form__label" for="project2">Название</label>
+                    <label class="award-form__label" for="project2">Полное наименование события / проекта</label>
                     <input class="award-form__input" name="project2" id="project2" placeholder="Классное мероприятие">
                 </p>
+                <fieldset>
+                    <legend class="award-form__label">Сроки проведения проекта</legend>
+                    <input class="award-form__input award-form__input--inline" type="date" name="start2" aria-label="Начало" required> — <input class="award-form__input" type="date" name="finish2" aria-label="Конец" required>
+                </fieldset>
                 <fieldset class="award-form__row">
                     <legend class="award-form__label">Направление</legend>
                     <label><input class="award-form__input" type="radio" name="area2" checked value="family"> Дети и родители</label>
@@ -163,9 +171,13 @@ function onSubmitOrderForm()
         <summary>Третья инициатива (событие или проект)</summary>
             <fieldset>
                 <p class="award-form__row">
-                    <label class="award-form__label" for="project3">Название</label>
+                    <label class="award-form__label" for="project3">Полное наименование события / проекта</label>
                     <input class="award-form__input" name="project3" id="project3" placeholder="Классное мероприятие">
                 </p>
+                <fieldset>
+                    <legend class="award-form__label">Сроки проведения проекта</legend>
+                    <input class="award-form__input award-form__input--inline" type="date" name="start3" aria-label="Начало"> — <input class="award-form__input" type="date" name="finish3" aria-label="Конец">
+                </fieldset>
                 <fieldset class="award-form__row">
                     <legend class="award-form__label">Направление</legend>
                     <label><input class="award-form__input" type="radio" name="area3" checked value="family"> Дети и родители</label>
