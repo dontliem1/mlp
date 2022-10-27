@@ -14,7 +14,7 @@ class Req extends Model
      *
      * @var array
      */
-    protected $fillable = ['name', 'birthday', 'city', 'job', 'contact', 'achievements', 'level', 'title', 'team', 'social', 'project1', 'start1', 'finish1', 'area1', 'geography1', 'quantity1', 'achievements1', 'social1', 'media1', 'vk1', 'project2', 'start2', 'finish2', 'area2', 'geography2', 'quantity2', 'achievements2', 'social2', 'media2', 'vk2', 'project3', 'start3', 'finish3', 'area3', 'geography3', 'quantity3', 'achievements3', 'social3', 'media3', 'vk3'];
+    protected $fillable = ['name', 'birthday', 'city', 'job', 'contact', 'achievements', 'level', 'title', 'team', 'social', 'project1', 'about1', 'start1', 'finish1', 'area1', 'geography1', 'quantity1', 'achievements1', 'social1', 'media1', 'vk1', 'project2', 'about2', 'start2', 'finish2', 'area2', 'geography2', 'quantity2', 'achievements2', 'social2', 'media2', 'vk2', 'project3', 'about3', 'start3', 'finish3', 'area3', 'geography3', 'quantity3', 'achievements3', 'social3', 'media3', 'vk3'];
 
     /**
      * @var string The database table used by the model.
