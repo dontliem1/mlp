@@ -1,0 +1,16 @@
+plugin:
+    name: 'folga.mlp::lang.plugin.name'
+    description: 'folga.mlp::lang.plugin.description'
+    author: Folga
+    icon: oc-icon-trophy
+    homepage: 'https://folga.digital'
+navigation:
+    mlp:
+        label: МЛП
+        url: folga/mlp/reqs
+        icon: icon-trophy
+        sideMenu:
+            mlp-apps:
+                label: Заявки
+                url: folga/mlp/reqs
+                icon: icon-user-plus

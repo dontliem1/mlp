@@ -1,8 +1,6 @@
-<?php
-
-return [
+<?php return [
     'plugin' => [
-        'name' => 'Mlp',
-        'description' => 'Молодежная лидерская премия',
-    ],
+        'name' => 'MLP',
+        'description' => 'Управление заявками и проектами'
+    ]
 ];

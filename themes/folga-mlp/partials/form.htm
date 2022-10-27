@@ -1,0 +1,50 @@
+<p class="award-form__row">
+    <label class="award-form__label" for="project{{ number }}">Полное наименование события / проекта</label>
+    <input class="award-form__input" name="project{{ number }}" id="project{{ number }}"{% if number is same as 1 %} required{% endif %}>
+</p>
+<p class="award-form__row">
+    <label class="award-form__label" for="about{{ number }}">Краткое описание события / проекта</label>
+    <textarea class="award-form__input" name="about{{ number }}" id="about{{ number }}" placeholder="Опишите суть вашей инициативы в 1-2 предложениях"{% if number is same as 1 %} required{% endif %} rows="5" maxlength="500"></textarea>
+</p>
+<fieldset>
+    <legend class="award-form__label">Сроки проведения проекта</legend>
+    <input class="award-form__input award-form__input--inline" type="date" name="start{{ number }}" aria-label="Начало"{% if number is same as 1 %} required{% endif %}> — <input class="award-form__input" type="date" name="finish{{ number }}" aria-label="Конец"{% if number is same as 1 %} required{% endif %}>
+</fieldset>
+<fieldset class="award-form__row">
+    <legend class="award-form__label">Направление</legend>
+    <label><input class="award-form__input" type="radio" name="area{{ number }}" checked value="family"> Дети и родители</label>
+    <label><input class="award-form__input" type="radio" name="area{{ number }}" value="charity"> Добровольчество и благотворительность</label>
+    <label><input class="award-form__input" type="radio" name="area{{ number }}" value="history"> История и патриотика</label>
+    <label><input class="award-form__input" type="radio" name="area{{ number }}" value="creative"> Креатив и творчество</label>
+    <label><input class="award-form__input" type="radio" name="area{{ number }}" value="media"> Медиа и кино</label>
+    <label><input class="award-form__input" type="radio" name="area{{ number }}" value="science"> Образование и наука</label>
+    <label><input class="award-form__input" type="radio" name="area{{ number }}" value="business"> Предпринимательство и инициативы</label>
+    <label><input class="award-form__input" type="radio" name="area{{ number }}" value="sport"> Спорт и здоровый образ жизни</label>
+    <label><input class="award-form__input" type="radio" name="area{{ number }}" value="tourism"> Туризм</label>
+    <label><input class="award-form__input" type="radio" name="area{{ number }}" value="ecology"> Экология</label>
+</fieldset>
+<p class="award-form__row">
+    <label class="award-form__label" for="geography{{ number }}">География</label>
+    <input class="award-form__input" name="geography{{ number }}" id="geography{{ number }}" placeholder="Тюменская область"{% if number is same as 1 %} required{% endif %}>
+</p>
+<p class="award-form__row">
+    <label class="award-form__label" for="quantity{{ number }}">Количество участников</label>
+    <input class="award-form__input" name="quantity{{ number }}" id="quantity{{ number }}" placeholder="1000 участников"{% if number is same as 1 %} required{% endif %}>
+</p>
+<p class="award-form__row">
+    <label class="award-form__label" for="achievements{{ number }}">Ключевые достижения</label>
+    <textarea class="award-form__input" name="achievements{{ number }}" id="achievements{{ number }}" placeholder="Создали 20 медиапродуктов, направленных на профилактику девиантного поведения в подростковой среде; охват продуктов 3 000 000"{% if number is same as 1 %} required{% endif %} rows="5"></textarea>
+</p>
+<p class="award-form__row">
+    <label class="award-form__label" for="social{{ number }}">Социальные сети</label>
+    <textarea class="award-form__input" name="social{{ number }}" id="social{{ number }}" placeholder="ВКонтакте, Одноклассники и др. при наличии" rows="3"{% if number is same as 1 %} required{% endif %}></textarea>
+</p>
+<p class="award-form__row">
+    <label class="award-form__label" for="media{{ number }}">Ссылки на публикации в СМИ или социальных медиа</label>
+    <textarea class="award-form__input" name="media{{ number }}" id="media{{ number }}" placeholder="https://72.ru/primer" rows="2"{% if number is same as 1 %} required{% endif %}></textarea>
+</p>
+<div class="award-form__row">
+    <label class="award-form__label" for="vk{{ number }}">Ссылка на видеоролик-визитку во ВКонтакте</label>
+    <p>При публикации использовать хэштег <code>#млп2022</code>. Продолжительность не более 1,5 минут, горизонтальный формат. Рассказать о себе (ФИО, 1-2 регалии), своих достижениях, своем неформальном сообществе или НКО, ключевых векторах деятельности и инициативах (событиях и проектах) команды. Допускается использование в ролике фото- и видеоматериалов с реализованных ранее инициатив (событий и проектов).</p>
+    <input class="award-form__input" type="url" name="vk{{ number }}" id="vk{{ number }}" placeholder="https://vk.com/video-208240117_456239018"{% if number is same as 1 %} required{% endif %}>
+</div>

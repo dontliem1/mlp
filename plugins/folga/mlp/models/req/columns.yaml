@@ -1,0 +1,23 @@
+columns:
+    id:
+        label: id
+        type: number
+    created_at:
+        label: Создана
+        type: datetime
+    name:
+        label: Имя
+        type: text
+        searchable: true
+    project1:
+        label: 'Проект 1'
+        type: text
+        searchable: true
+    project2:
+        label: 'Проект 2'
+        type: text
+        searchable: true
+    project3:
+        label: 'Проект 3'
+        type: text
+        searchable: true

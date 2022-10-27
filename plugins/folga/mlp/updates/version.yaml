@@ -1,2 +1,5 @@
-'1.0.0':
-    - 'First version of mlp'
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table folga_mlp_apps'
+    - builder_table_create_folga_mlp_apps.php

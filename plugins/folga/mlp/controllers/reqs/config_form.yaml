@@ -1,0 +1,10 @@
+name: Reqs
+form: $/folga/mlp/models/req/fields.yaml
+modelClass: Folga\Mlp\Models\Req
+defaultRedirect: folga/mlp/reqs
+create:
+    redirect: 'folga/mlp/reqs/update/:id'
+    redirectClose: folga/mlp/reqs
+update:
+    redirect: folga/mlp/reqs
+    redirectClose: folga/mlp/reqs

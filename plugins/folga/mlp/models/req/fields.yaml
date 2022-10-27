@@ -1,0 +1,318 @@
+fields:
+    leader:
+        label: Лидер
+        span: full
+        type: section
+    name:
+        label: ФИО
+        span: auto
+        required: true
+        placeholder: 'Иванова Мария Сергеевна'
+        type: text
+    birthday:
+        label: 'Дата рождения'
+        mode: date
+        yearRange: '[1900,2021]'
+        span: auto
+        required: true
+        type: datepicker
+    city:
+        label: 'Место проживания'
+        span: auto
+        required: true
+        placeholder: Тюмень
+        type: text
+    job:
+        label: 'Место работы и должность / место учебы, направление и курс обучения'
+        span: auto
+        required: true
+        placeholder: 'ООО «Компания», менеджер'
+        type: text
+    contact:
+        label: 'Контактные данные (мобильный телефон, ссылка на ВКонтакте)'
+        span: auto
+        required: true
+        placeholder: '+7 999 999-99-99, https://vk.com/1'
+        type: textarea
+        size: tiny
+    achievements:
+        label: Достижения
+        span: auto
+        required: true
+        placeholder: 'Награды, знаки отличия, иные значимые достижения'
+        type: textarea
+        size: small
+    level:
+        label: 'Уровень проектного менеджмента'
+        span: auto
+        required: true
+        type: radio
+        options:
+            professional: 'Профессиональный общественник / профи'
+            beginner: 'Начинающий общественник / дебютант'
+    teamSection:
+        label: Команда
+        span: full
+        type: section
+    title:
+        label: Название
+        span: full
+        required: true
+        placeholder: 'Неформальное объединение / НКО'
+        type: text
+    team:
+        label: 'ФИО участников команды'
+        size: small
+        span: auto
+        placeholder: 'Иванов Петр Васильевич, Пушкина Елена Михайловна'
+        required: true
+        type: textarea
+    social:
+        label: 'Социальные сети команды'
+        size: small
+        span: auto
+        placeholder: 'ВКонтакте, Одноклассники и др. при наличии'
+        required: true
+        type: textarea
+tabs:
+    fields:
+        project1:
+            label: 'Полное наименование события / проекта'
+            span: full
+            required: true
+            type: text
+            tab: 'Проект 1'
+        about1:
+            label: 'Краткое описание события / проекта'
+            size: small
+            span: right
+            placeholder: 'Опишите суть вашей инициативы в 1-2 предложениях'
+            required: true
+            type: textarea
+            tab: 'Проект 1'
+        start1:
+            label: 'Начало'
+            mode: date
+            required: true
+            span: left
+            tab: 'Проект 1'
+            type: datepicker
+        finish1:
+            label: 'Конец'
+            mode: date
+            required: true
+            span: left
+            tab: 'Проект 1'
+            type: datepicker
+        area1:
+            label: 'Направление'
+            span: left
+            tab: 'Проект 1'
+            type: radio
+            options:
+                family: 'Дети и родители'
+                charity: 'Добровольчество и благотворительность'
+                history: 'История и патриотика'
+                creative: 'Креатив и творчество'
+                media: 'Медиа и кино'
+                science: 'Образование и наука'
+                business: 'Предпринимательство и инициативы'
+                sport: 'Спорт и здоровый образ жизни'
+                tourism: 'Туризм'
+                ecology: 'Экология'
+        geography1:
+            label: 'География'
+            span: right
+            required: true
+            placeholder: 'Тюменская область'
+            tab: 'Проект 1'
+        quantity1:
+            label: 'Количество участников'
+            span: right
+            required: true
+            placeholder: '1000 участников'
+            tab: 'Проект 1'
+        achievements1:
+            label: 'Ключевые достижения'
+            size: small
+            span: right
+            placeholder: 'Создали 20 медиапродуктов, направленных на профилактику девиантного поведения в подростковой среде; охват продуктов 3 000 000'
+            required: true
+            type: textarea
+            tab: 'Проект 1'
+        social1:
+            label: 'Социальные сети'
+            size: small
+            span: auto
+            placeholder: 'ВКонтакте, Одноклассники и др. при наличии'
+            required: true
+            type: textarea
+            tab: 'Проект 1'
+        media1:
+            label: 'Ссылки на публикации в СМИ или социальных медиа'
+            size: small
+            span: auto
+            placeholder: 'https://72.ru/primer'
+            required: true
+            type: textarea
+            tab: 'Проект 1'
+        vk1:
+            label: 'Ссылка на видеоролик-визитку во ВКонтакте'
+            span: auto
+            required: true
+            placeholder: 'https://vk.com/video-208240117_456239018'
+            tab: 'Проект 1'
+
+        project2:
+            label: 'Полное наименование события / проекта'
+            span: full
+            type: text
+            tab: 'Проект 2'
+        about2:
+            label: 'Краткое описание события / проекта'
+            size: small
+            span: right
+            placeholder: 'Опишите суть вашей инициативы в 1-2 предложениях'
+            type: textarea
+            tab: 'Проект 2'
+        start2:
+            label: 'Начало'
+            mode: date
+            span: left
+            tab: 'Проект 2'
+            type: datepicker
+        finish2:
+            label: 'Конец'
+            mode: date
+            span: left
+            tab: 'Проект 2'
+            type: datepicker
+        area2:
+            label: 'Направление'
+            span: left
+            tab: 'Проект 2'
+            type: radio
+            options:
+                family: 'Дети и родители'
+                charity: 'Добровольчество и благотворительность'
+                history: 'История и патриотика'
+                creative: 'Креатив и творчество'
+                media: 'Медиа и кино'
+                science: 'Образование и наука'
+                business: 'Предпринимательство и инициативы'
+                sport: 'Спорт и здоровый образ жизни'
+                tourism: 'Туризм'
+                ecology: 'Экология'
+        geography2:
+            label: 'География'
+            span: right
+            placeholder: 'Тюменская область'
+            tab: 'Проект 2'
+        quantity2:
+            label: 'Количество участников'
+            span: right
+            placeholder: '1000 участников'
+            tab: 'Проект 2'
+        achievements2:
+            label: 'Ключевые достижения'
+            size: small
+            span: right
+            placeholder: 'Создали 20 медиапродуктов, направленных на профилактику девиантного поведения в подростковой среде; охват продуктов 3 000 000'
+            type: textarea
+            tab: 'Проект 2'
+        social2:
+            label: 'Социальные сети'
+            size: small
+            span: auto
+            placeholder: 'ВКонтакте, Одноклассники и др. при наличии'
+            type: textarea
+            tab: 'Проект 2'
+        media2:
+            label: 'Ссылки на публикации в СМИ или социальных медиа'
+            size: small
+            span: auto
+            placeholder: 'https://72.ru/primer'
+            type: textarea
+            tab: 'Проект 2'
+        vk2:
+            label: 'Ссылка на видеоролик-визитку во ВКонтакте'
+            span: auto
+            placeholder: 'https://vk.com/video-208240117_456239018'
+            tab: 'Проект 2'
+
+        project3:
+            label: 'Полное наименование события / проекта'
+            span: full
+            type: text
+            tab: 'Проект 3'
+        about3:
+            label: 'Краткое описание события / проекта'
+            size: small
+            span: right
+            placeholder: 'Опишите суть вашей инициативы в 1-2 предложениях'
+            type: textarea
+            tab: 'Проект 3'
+        start3:
+            label: 'Начало'
+            mode: date
+            span: left
+            tab: 'Проект 3'
+            type: datepicker
+        finish3:
+            label: 'Конец'
+            mode: date
+            span: left
+            tab: 'Проект 3'
+            type: datepicker
+        area3:
+            label: 'Направление'
+            span: left
+            tab: 'Проект 3'
+            type: radio
+            options:
+                family: 'Дети и родители'
+                charity: 'Добровольчество и благотворительность'
+                history: 'История и патриотика'
+                creative: 'Креатив и творчество'
+                media: 'Медиа и кино'
+                science: 'Образование и наука'
+                business: 'Предпринимательство и инициативы'
+                sport: 'Спорт и здоровый образ жизни'
+                tourism: 'Туризм'
+                ecology: 'Экология'
+        geography3:
+            label: 'География'
+            span: right
+            placeholder: 'Тюменская область'
+            tab: 'Проект 3'
+        quantity3:
+            label: 'Количество участников'
+            span: right
+            placeholder: '1000 участников'
+            tab: 'Проект 3'
+        achievements3:
+            label: 'Ключевые достижения'
+            size: small
+            span: right
+            placeholder: 'Создали 20 медиапродуктов, направленных на профилактику девиантного поведения в подростковой среде; охват продуктов 3 000 000'
+            type: textarea
+            tab: 'Проект 3'
+        social3:
+            label: 'Социальные сети'
+            size: small
+            span: auto
+            placeholder: 'ВКонтакте, Одноклассники и др. при наличии'
+            type: textarea
+            tab: 'Проект 3'
+        media3:
+            label: 'Ссылки на публикации в СМИ или социальных медиа'
+            size: small
+            span: auto
+            placeholder: 'https://72.ru/primer'
+            type: textarea
+            tab: 'Проект 3'
+        vk3:
+            label: 'Ссылка на видеоролик-визитку во ВКонтакте'
+            span: auto
+            placeholder: 'https://vk.com/video-208240117_456239018'
+            tab: 'Проект 3'
