@@ -1016,7 +1016,7 @@ a.award-form__btn {
 
 .projects__title {
     display: flex;
-    background-color: #161BFF;
+    background-color: #333;
     text-align: center;
     padding: .5em 1em;
     transition: background-color .2s;
