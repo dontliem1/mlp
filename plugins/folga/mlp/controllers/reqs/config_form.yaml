@@ -1,6 +1,6 @@
-name: Reqs
-form: $/folga/mlp/models/req/fields.yaml
+name: Заявка
 modelClass: Folga\Mlp\Models\Req
+form: $/folga/mlp/models/req/fields.yaml
 defaultRedirect: folga/mlp/reqs
 create:
     redirect: 'folga/mlp/reqs/update/:id'
@@ -8,3 +8,4 @@ create:
 update:
     redirect: folga/mlp/reqs
     redirectClose: folga/mlp/reqs
+preview: {  }

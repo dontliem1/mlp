@@ -14,3 +14,7 @@ navigation:
                 label: Заявки
                 url: folga/mlp/reqs
                 icon: icon-user-plus
+            mlp-projects:
+                label: Проекты
+                url: folga/mlp/projects
+                icon: icon-list

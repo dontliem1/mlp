@@ -1,0 +1,17 @@
+columns:
+    title:
+        label: Название
+        type: text
+        searchable: true
+    year:
+        label: Год
+        type: number
+    active:
+        label: Показывать
+        type: switch
+    slug:
+        label: Адрес
+        type: text
+    link:
+        label: Ссылка
+        type: text

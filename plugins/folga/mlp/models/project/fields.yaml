@@ -1,0 +1,76 @@
+fields:
+    title:
+        label: Заголовок
+        span: auto
+        required: true
+        type: text
+    slug:
+        label: Адрес
+        span: auto
+        required: true
+        preset:
+            field: title
+            type: slug
+        type: text
+    year:
+        label: 'Год'
+        span: auto
+        required: true
+        attributes:
+            min: '2018'
+            max: '2023'
+        type: number
+    link:
+        label: 'Ссылка на событие'
+        span: auto
+        type: text
+    active:
+        label: 'Отобразить на сайте'
+        span: auto
+        default: 1
+        type: switch
+    content:
+        label: Описание
+        size: large
+        mode: tab
+        span: full
+        type: markdown
+    gallery:
+        label: Галерея
+        prompt: 'Добавить фото'
+        style: default
+        span: auto
+        type: repeater
+        form:
+            fields:
+                photo:
+                    label: Фотография
+                    mode: image
+                    span: auto
+                    type: mediafinder
+                alt:
+                    label: 'Альтернативный текст'
+                    span: auto
+                    type: text
+    team:
+        label: Команда
+        prompt: 'Добавить участника'
+        titleFrom: name
+        style: default
+        span: auto
+        type: repeater
+        form:
+            fields:
+                photo:
+                    label: Фотография
+                    mode: image
+                    span: auto
+                    type: mediafinder
+                name:
+                    label: 'Имя Фамилия'
+                    span: auto
+                    type: text
+                job:
+                    label: Должность
+                    span: auto
+                    type: text

@@ -1,0 +1,5 @@
+title: Проекты
+modelClass: Folga\Mlp\Models\Project
+nameFrom: title
+toolbar:
+    buttons: reorder_toolbar

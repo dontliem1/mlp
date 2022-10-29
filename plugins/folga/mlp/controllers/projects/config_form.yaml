@@ -1,0 +1,11 @@
+name: Проект
+modelClass: Folga\Mlp\Models\Project
+form: $/folga/mlp/models/project/fields.yaml
+defaultRedirect: folga/mlp/projects
+create:
+    redirect: 'folga/mlp/projects/update/:id'
+    redirectClose: folga/mlp/projects
+update:
+    redirect: folga/mlp/projects
+    redirectClose: folga/mlp/projects
+preview: {  }

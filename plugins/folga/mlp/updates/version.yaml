@@ -3,3 +3,6 @@
 1.0.2:
     - 'Created table folga_mlp_apps'
     - builder_table_create_folga_mlp_apps.php
+1.0.3:
+    - 'Created table folga_mlp_projects'
+    - builder_table_create_folga_mlp_projects.php

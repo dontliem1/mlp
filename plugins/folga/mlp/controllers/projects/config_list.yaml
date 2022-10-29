@@ -1,0 +1,21 @@
+title: Проекты
+modelClass: Folga\Mlp\Models\Project
+list: $/folga/mlp/models/project/columns.yaml
+recordUrl: 'folga/mlp/projects/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+filter:
+    scopes:
+        year:
+            label: Год
+            type: number
+            step: 1
+            min: 2018
+            max: 2023
+            conditions: year = ':filtered'

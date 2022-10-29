@@ -1,0 +1,40 @@
+title = "Проект"
+url = "/projects/:slug"
+layout = "default"
+==
+<?php
+use Folga\Mlp\Models\Project;
+
+function onStart()
+{
+    $this['project'] = Project::where('slug', $this->param('slug'))->first();
+
+    if (!$this->project) {
+        return Redirect::to('/404');
+    };
+
+    $this->page->title = $this->project->title;
+    $this->page->description = substr($this->project->content, 0, 100);
+}
+?>
+==
+<main class="container project__content">
+    {% if project.gallery is not empty %}
+    <img class="project__cover" src="{{project.gallery[0].photo|media}}" width="320" height="240" alt="">
+    {% endif %}
+    <h1 class="project__title">{{project.title}}</h1>
+    <article class="project-description">
+        {{ project.content|md }}
+    </article>
+    <div class="project__photos">
+        {% for image in project.gallery %}
+        {% if not loop.first %}
+        <img class="project__photo" src="{{image.photo|media}}" width="240" height="160" alt="{{image.alt}}" loading="lazy">
+        {% endif %}
+        {% endfor %}
+    </div>
+    <footer class="project__footer">
+        <a href="{{project.year|page}}" class="link--solid">← Все победители</a>
+        {% if project.link %}<a href="{{project.link}}" class="award-form__btn" target="_blank">Ссылка на событие</a>{% endif %}
+    </footer>
+</main>

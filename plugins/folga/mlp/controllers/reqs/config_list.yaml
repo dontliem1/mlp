@@ -1,12 +1,12 @@
-list: $/folga/mlp/models/req/columns.yaml
+title: Заявки
 modelClass: Folga\Mlp\Models\Req
-title: Reqs
+list: $/folga/mlp/models/req/columns.yaml
+recordUrl: 'folga/mlp/reqs/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
 showSetup: true
 showCheckboxes: true
-recordsPerPage: 20
 toolbar:
     buttons: list_toolbar
     search:
         prompt: 'backend::lang.list.search_prompt'
-recordUrl: 'folga/mlp/reqs/update/:id'
