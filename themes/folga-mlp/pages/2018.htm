@@ -8,7 +8,7 @@ use Folga\Mlp\Models\Project;
 
 function onStart()
 {
-    $this['projects'] = Project::where('active', 1)->where('year', 2018)->orderBy('sort_order', 'desc')->get();
+    $this['projects'] = Project::where('active', 1)->where('year', 2018)->orderBy('sort_order', 'asc')->get();
 }
 ?>
 ==

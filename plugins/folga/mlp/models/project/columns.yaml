@@ -1,17 +1,17 @@
 columns:
+    sort_order:
+        label: Порядок
+        type: number
     title:
         label: Название
         type: text
         searchable: true
+    slug:
+        label: Адрес
+        type: text
     year:
         label: Год
         type: number
     active:
         label: Показывать
         type: switch
-    slug:
-        label: Адрес
-        type: text
-    link:
-        label: Ссылка
-        type: text

@@ -22,6 +22,10 @@ class Project extends Model
      */
     public $table = 'folga_mlp_projects';
 
+    public $implement = [
+        'Winter.Storm.Database.Behaviors.Sortable'
+    ];
+
     /**
      * @var array Validation rules
      */

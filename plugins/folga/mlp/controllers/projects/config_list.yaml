@@ -3,9 +3,12 @@ modelClass: Folga\Mlp\Models\Project
 list: $/folga/mlp/models/project/columns.yaml
 recordUrl: 'folga/mlp/projects/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'
-recordsPerPage: 20
+recordsPerPage: '80'
 showSetup: true
 showCheckboxes: true
+defaultSort:
+    column: sort_order
+    direction: asc
 toolbar:
     buttons: list_toolbar
     search:
@@ -18,4 +21,4 @@ filter:
             step: 1
             min: 2018
             max: 2023
-            conditions: year = ':filtered'
+            conditions: "year = ':filtered'"
