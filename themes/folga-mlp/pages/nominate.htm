@@ -18,7 +18,7 @@ function onSubmitOrderForm()
         $params[$key] = post($key);
     }
     Req::create($params);
-    // Mail::sendTo('YouthLeaderAward@yandex.ru', 'folga.mlp::mail.nominate', $params);
+    Mail::sendTo('YouthLeaderAward@yandex.ru', 'folga.mlp::mail.nominate', $params);
 }
 ?>
 ==
