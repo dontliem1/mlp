@@ -259,6 +259,7 @@ fieldset ~ details {
 .award-nav__logo img {
     height: auto;
     max-width: 100%;
+    width: 5em;
 }
 
 .award-nav__list {
@@ -270,7 +271,7 @@ fieldset ~ details {
 }
 @media (min-width: 45em) {
     .award-nav__list {
-        flex-basis: auto;
+        flex-basis: 19em;
         flex-grow: 0;
     }
 }

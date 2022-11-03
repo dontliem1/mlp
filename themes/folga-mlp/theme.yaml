@@ -8,6 +8,7 @@ form:
         doc:
             label: 'Положение о конкурсе'
             mode: image
+            required: true
             span: auto
             type: mediafinder
         partners:
