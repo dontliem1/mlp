@@ -125,21 +125,20 @@ description = "Расскажи о событиях и проектах, кот�
             </a>
         </div>
     </section>
+    {% if this.theme.partners is not empty %}
     <section>
         <h2 class="section-heading">Партнёры проекта</h2>
         <ul class="award-partners__list">
-            <li class="award-partners__item">
-                <a href="https://vk.com/moyaterritoriya72" target="_blank">
-                    <img class="award-partners__logo" width="180" height="100" src="{{ 'assets/images/partners/mt.svg'|theme }}" alt="Моя территория" loading="lazy">
-                </a>
-            </li>
-            <li class="award-partners__item">
-                <a href="https://vk.com/mediacentr72" target="_blank">
-                    <img class="award-partners__logo" width="180" height="100" src="{{ 'assets/images/partners/mediacenter.jpg'|theme }}" alt="Медиацентр молодежной политики" loading="lazy">
-                </a>
-            </li>
+            {% for partner in this.theme.partners %}
+                <li class="award-partners__item">
+                    <a href="{{ partner.link }}" target="_blank">
+                        <img class="award-partners__logo" width="180" src="{{ partner.logo|media }}" alt="{{ partner.alt }}" loading="lazy">
+                    </a>
+                </li>
+            {% endfor %}
         </ul>
-  </section>
+    </section>
+    {% endif %}
 </div>
 <div class="award-team container">
 <h2 class="section-heading">Команда проекта</h2>

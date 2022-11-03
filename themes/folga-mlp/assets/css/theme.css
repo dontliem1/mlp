@@ -746,6 +746,7 @@ a.award-form__btn {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    column-gap: 4em;
 }
 .award-partners__list {
     display: flex;
@@ -761,8 +762,8 @@ a.award-form__btn {
 }
 
 .award-partners__item {
-    flex-basis: 9em;
-    max-width: 9em;
+    max-width: 100%;
+    width: 9em;
 }
 
 .award-partners__logo {

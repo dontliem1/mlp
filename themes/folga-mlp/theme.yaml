@@ -7,5 +7,30 @@ form:
     fields:
         doc:
             label: 'Положение о конкурсе'
-            type: mediafinder
             mode: image
+            span: auto
+            type: mediafinder
+        partners:
+            label: Партнеры
+            prompt: 'Добавить партнера'
+            style: default
+            span: auto
+            type: repeater
+            form:
+                fields:
+                    logo:
+                        label: Логотип
+                        mode: image
+                        span: left
+                        type: mediafinder
+                        required: true
+                    alt:
+                        label: 'Название'
+                        span: right
+                        type: text
+                        required: true
+                    link:
+                        label: 'Ссылка'
+                        span: right
+                        type: text
+                        required: true
