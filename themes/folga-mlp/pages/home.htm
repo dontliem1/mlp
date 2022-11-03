@@ -85,7 +85,7 @@ description = "Расскажи о событиях и проектах, кот�
       <p class="award-criteria__description">события и проекты должны упоминаться в СМИ и/или социальных медиа</p>
     </div>
   </div>
-  <p>Еще больше информации о конкурсе ты можешь узнать из его <a href="{{ 'assets/pdf/konkurs.pdf'|theme }}" target="_blank" class="link--solid link--pdf">положения</a>.</p>
+  <p>Еще больше информации о конкурсе ты можешь узнать из его <a href="{{ this.theme.doc ? this.theme.doc|media : 'assets/pdf/konkurs.pdf'|theme }}" target="_blank" class="link--solid link--pdf">положения</a>.</p>
 </section>
 
 {# {% if award.experts.people %}
