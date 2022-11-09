@@ -125,6 +125,20 @@ description = "Расскажи о событиях и проектах, кот�
             </a>
         </div>
     </section>
+    {% if this.theme.general is not empty %}
+    <section>
+        <h2 class="section-heading">Генеральные партнеры</h2>
+        <ul class="award-partners__list">
+            {% for partner in this.theme.general %}
+                <li class="award-partners__item">
+                    <a href="{{ partner.link }}" target="_blank">
+                        <img class="award-partners__logo" width="180" src="{{ partner.logo|media }}" alt="{{ partner.alt }}" loading="lazy">
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+    {% endif %}
     {% if this.theme.partners is not empty %}
     <section>
         <h2 class="section-heading">Партнёры проекта</h2>

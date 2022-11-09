@@ -5,12 +5,30 @@ homepage: "https://folga.digital"
 code: "folga-mlp"
 form:
     fields:
-        doc:
-            label: 'Положение о конкурсе'
-            mode: image
-            required: true
+        general:
+            label: Генеральные партнеры
+            prompt: 'Добавить партнера'
+            style: default
             span: auto
-            type: mediafinder
+            type: repeater
+            form:
+                fields:
+                    logo:
+                        label: Логотип
+                        mode: image
+                        span: left
+                        type: mediafinder
+                        required: true
+                    alt:
+                        label: 'Название'
+                        span: right
+                        type: text
+                        required: true
+                    link:
+                        label: 'Ссылка'
+                        span: right
+                        type: text
+                        required: true
         partners:
             label: Партнеры
             prompt: 'Добавить партнера'
@@ -35,3 +53,9 @@ form:
                         span: right
                         type: text
                         required: true
+        doc:
+            label: 'Положение о конкурсе'
+            mode: image
+            required: true
+            span: auto
+            type: mediafinder
