@@ -29,7 +29,7 @@ function onSubmitOrderForm()
             <legend class="section-heading">Лидер</legend>
             <p class="award-form__row">
                 {{ form_label('name', 'ФИО', {'class': 'award-form__label'}) }}
-                {{ form_text('name', '', {'class': 'award-form__input', 'placeholder': 'Иванова Мария Сергеевна', 'required': ''}) }}
+                {{ form_text('name', '', {'class': 'award-form__input', 'placeholder': 'Иванова Мария Сергеевна', 'required': '', 'maxlength': 255}) }}
             </p>
             <p class="award-form__row">
                 {{ form_label('birthday', 'Дата рождения', {'class': 'award-form__label'}) }}
@@ -37,7 +37,7 @@ function onSubmitOrderForm()
             </p>
             <p class="award-form__row">
                 {{ form_label('city', 'Место проживания', {'class': 'award-form__label'}) }}
-                {{ form_text('city', '', {'class': 'award-form__input', 'placeholder': 'Тюмень', 'required': ''}) }}
+                {{ form_text('city', '', {'class': 'award-form__input', 'placeholder': 'Тюмень', 'required': '', 'maxlength': 255}) }}
             </p>
             <p class="award-form__row">
                 {{ form_label('job', 'Место работы и должность / место учебы, направление и курс обучения', {'class': 'award-form__label'}) }}
@@ -62,7 +62,7 @@ function onSubmitOrderForm()
             <legend class="section-heading">Команда</legend>
             <p class="award-form__row">
                 {{ form_label('title', 'Название', {'class': 'award-form__label'}) }}
-                {{ form_text('title', '', {'class': 'award-form__input', 'placeholder': 'Неформальное объединение / НКО', 'required': ''}) }}
+                {{ form_text('title', '', {'class': 'award-form__input', 'placeholder': 'Неформальное объединение / НКО', 'required': '', 'maxlength': 255}) }}
             </p>
             <p class="award-form__row">
                 {{ form_label('team', 'ФИО участников команды', {'class': 'award-form__label'}) }}

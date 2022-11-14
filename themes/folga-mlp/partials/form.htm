@@ -1,5 +1,5 @@
 <p class="award-form__row">
-    <label class="award-form__label" for="project{{ number }}">Полное наименование события / проекта</label>
+    <label class="award-form__label" for="project{{ number }}" maxlength="255">Полное наименование события / проекта</label>
     <input class="award-form__input" name="project{{ number }}" id="project{{ number }}"{% if number is same as 1 %} required{% endif %}>
 </p>
 <p class="award-form__row">
@@ -29,7 +29,7 @@
 </p>
 <p class="award-form__row">
     <label class="award-form__label" for="quantity{{ number }}">Количество участников</label>
-    <input class="award-form__input" name="quantity{{ number }}" id="quantity{{ number }}" placeholder="1000 участников"{% if number is same as 1 %} required{% endif %}>
+    <input class="award-form__input" name="quantity{{ number }}" id="quantity{{ number }}" placeholder="1000 участников"{% if number is same as 1 %} required{% endif %} maxlength="255">
 </p>
 <p class="award-form__row">
     <label class="award-form__label" for="achievements{{ number }}">Ключевые достижения</label>
@@ -44,7 +44,7 @@
     <textarea class="award-form__input" name="media{{ number }}" id="media{{ number }}" placeholder="https://72.ru/primer" rows="2"{% if number is same as 1 %} required{% endif %}></textarea>
 </p>
 <div class="award-form__row">
-    <label class="award-form__label" for="vk{{ number }}">Ссылка на видеоролик-визитку во ВКонтакте</label>
+    <label class="award-form__label" for="vk{{ number }}" maxlength="255">Ссылка на видеоролик-визитку во ВКонтакте</label>
     <p>При публикации использовать хэштег <code>#млп2022</code>. Продолжительность не более 1,5 минут, горизонтальный формат. Рассказать о себе (ФИО, 1-2 регалии), своих достижениях, своем неформальном сообществе или НКО, ключевых векторах деятельности и инициативах (событиях и проектах) команды. Допускается использование в ролике фото- и видеоматериалов с реализованных ранее инициатив (событий и проектов).</p>
     <input class="award-form__input" type="url" name="vk{{ number }}" id="vk{{ number }}" placeholder="https://vk.com/video-208240117_456239018"{% if number is same as 1 %} required{% endif %}>
 </div>
