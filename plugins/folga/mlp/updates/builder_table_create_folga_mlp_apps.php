@@ -16,7 +16,7 @@ class BuilderTableCreateFolgaMlpApps extends Migration
             $table->string('name');
             $table->string('birthday');
             $table->string('city');
-            $table->string('job');
+            $table->text('job');
             $table->text('contact');
             $table->text('achievements');
             $table->string('level');
@@ -28,7 +28,7 @@ class BuilderTableCreateFolgaMlpApps extends Migration
             $table->string('start1');
             $table->string('finish1');
             $table->string('area1');
-            $table->string('geography1');
+            $table->text('geography1');
             $table->string('quantity1');
             $table->text('achievements1');
             $table->text('social1');
@@ -39,7 +39,7 @@ class BuilderTableCreateFolgaMlpApps extends Migration
             $table->string('start2')->nullable();
             $table->string('finish2')->nullable();
             $table->string('area2')->nullable();
-            $table->string('geography2')->nullable();
+            $table->text('geography2')->nullable();
             $table->string('quantity2')->nullable();
             $table->text('achievements2')->nullable();
             $table->text('social2')->nullable();
@@ -50,7 +50,7 @@ class BuilderTableCreateFolgaMlpApps extends Migration
             $table->string('start3')->nullable();
             $table->string('finish3')->nullable();
             $table->string('area3')->nullable();
-            $table->string('geography3')->nullable();
+            $table->text('geography3')->nullable();
             $table->string('quantity3')->nullable();
             $table->text('achievements3')->nullable();
             $table->text('social3')->nullable();
