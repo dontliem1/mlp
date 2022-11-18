@@ -6,9 +6,11 @@
         <li class="award-nav__item">
             <a class="award-nav__link" href="/#about">О премии</a>
         </li>
+        {% if 'now'|date() < '2022-11-18T19:00'|date() %}
         <li class="award-nav__item">
             <a class="award-nav__link" href="{{ 'nominate'|page }}">Подать заявку</a>
         </li>
+        {% endif %}
         <li class="award-nav__item">
             <a class="award-nav__link" href="{{ '2018'|page }}">Победители 2018</a>
         </li>

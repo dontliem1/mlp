@@ -22,6 +22,11 @@ function onSubmitOrderForm()
 }
 ?>
 ==
+{% if 'now'|date() >= '2022-11-18T19:00'|date() %}
+<main class="container">
+    <h1>Приём заявок завершён!</h1>
+</main>
+{% else %}
 <main class="container">
     <h1>Расскажи о событии или проекте</h1>
     {{ form_open({ method: 'post', id: 'awardForm' }) }}
@@ -166,3 +171,4 @@ bindFormSubmitHandler('awardForm', 'onSubmitOrderForm');
 </script>
 {% endput %}
 {% snowboard request %}
+{% endif %}
