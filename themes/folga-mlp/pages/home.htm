@@ -88,26 +88,23 @@ description = "Расскажи о событиях и проектах, кот�
   <p>Еще больше информации о конкурсе ты можешь узнать из его <a href="{{ this.theme.doc ? this.theme.doc|media : 'assets/pdf/konkurs.pdf'|theme }}" target="_blank" class="link--solid link--pdf">положения</a>.</p>
 </section>
 
+{% if this.theme.experts %}
   <section class="award-experts container" id="experts">
     <h2 class="section-heading">Эксперты проекта</h2>
     <button class="award-experts__reset" type="button" title="Сбросить фильтр" hidden></button>
     <ul class="award-experts__list">
-    <li class="award-team__person">
-        <img class="award-team__person_photo" src="{{ 'assets/images/team/chumak.jpg'|theme }}" alt="" width="300" height="300" loading="lazy">
-        <div class="award-criteria__item">
-            <b class="award-criteria__title">Мария Чумак</b>
-            <p class="award-criteria__description">Руководитель проекта, социальный продюсер</p>
-        </div>
-    </li>
-    <li class="award-team__person">
-        <img class="award-team__person_photo" src="{{ 'assets/images/team/karachev.jpg'|theme }}" alt="" width="300" height="300" loading="lazy">
-        <div class="award-criteria__item">
-            <b class="award-criteria__title">Иван Карачев</b>
-            <p class="award-criteria__description">Программный продюсер проекта, исследователь-аналитик</p>
-        </div>
-    </li>
+      {% for person in this.theme.experts %}
+      <li class="award-team__person">
+          <img class="award-team__person_photo" src="{{ person.photo|media }}" alt="" width="300" height="300" loading="lazy">
+          <div class="award-criteria__item">
+              <b class="award-criteria__title">{{person.name}}</b>
+              <p class="award-criteria__description">{{person.job}}</p>
+          </div>
+      </li>
+      {% endfor %}
     </ul>
   </section>
+{% endif %}
 
 <section class="award-form" id="nominate">
     <div class="award-form__pictures js_slideshow">
