@@ -875,6 +875,15 @@ a.award-form__btn {
         flex-direction: row;
         flex-grow: 1;
     }
+
+    .award-experts__list .award-team__person {
+        flex-basis: 20em;
+        flex-grow: 0;
+    }
+
+    .award-experts__list .award-team__person_photo {
+        width: 9em;
+    }
 }
 
 /* Experts */
@@ -895,77 +904,6 @@ a.award-form__btn {
     margin-top: 2em;
     margin-bottom: 0;
     flex-basis: 100%;
-}
-
-.award-experts__person {
-    display: flex;
-    flex-grow: 1;
-    flex-basis: 20em;
-}
-
-.award-experts__person[hidden] {
-    display: none;
-}
-
-.award-experts__photo {
-    width: 6em;
-    height: 6em;
-    margin-right: 1em;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 50%;
-    position: relative;
-    box-shadow: -.25em .25em 0 #B9272D;
-}
-
-.award-experts__name {
-    background-color: #333;
-    color: #fff;
-    display: block;
-    margin-left: -4em;
-    padding: .2em 1em .2em 4em;
-}
-
-.award-experts__job {
-    margin: .5em 0;
-    font-size: 87.5%;
-}
-
-.award-experts__area,
-.award-experts__reset {
-    font-size: 87.5%;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    border-radius: 0;
-    cursor: pointer;
-    background: none;
-    text-transform: uppercase;
-    letter-spacing: .1em;
-    color: #161BFF;
-    transition: color .2s;
-}
-
-.award-experts__reset {
-    margin-top: 1em;
-}
-
-.award-experts__area:hover,
-.award-experts__reset:hover {
-    color: #B9272D;
-}
-
-.award-experts__area:active,
-.award-experts__reset:active {
-    color: inherit;
-}
-
-.award-experts__reset::before {
-    content: '╳ ';
-}
-
-.award-experts__area:empty {
-    visibility: hidden;
 }
 
 /* Footer */

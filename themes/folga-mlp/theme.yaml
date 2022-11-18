@@ -53,6 +53,28 @@ form:
                         span: right
                         type: text
                         required: true
+        experts:
+            label: 'Эксперты проекта'
+            prompt: 'Добавить эксперта'
+            style: default
+            span: auto
+            type: repeater
+            form:
+                fields:
+                    logo:
+                        label: Фотография
+                        mode: image
+                        span: left
+                        type: mediafinder
+                        required: true
+                    name:
+                        label: 'Имя'
+                        span: right
+                        required: true
+                    job:
+                        label: 'Должность'
+                        span: right
+                        required: true
         doc:
             label: 'Положение о конкурсе'
             mode: image
