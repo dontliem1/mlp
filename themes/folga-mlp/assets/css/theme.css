@@ -945,19 +945,17 @@ a.award-form__btn {
     border-top: 3px solid;
     display: inline-flex;
     margin-top: .5em;
-    padding-bottom: .5em;
-    padding-right: .5em;
-    padding-top: .5em;
+    padding: .5em;
 }
 
 .award-experts__person_job {
     border-bottom: 3px solid;
     margin-bottom: 0;
-    padding-bottom: .5em;
-    margin-left: .5em;
-    margin-top: .5em;
-    padding-left: .5em;
-    padding-right: .5em;
+    padding-bottom: .5rem;
+    margin-left: .5rem;
+    margin-top: .5rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
     grid-column: 1/3;
 }
 

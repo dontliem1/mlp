@@ -73,7 +73,9 @@ form:
                         required: true
                     job:
                         label: 'Должность'
-                        span: right
+                        span: full
+                        type: textarea
+                        size: small
                         required: true
         doc:
             label: 'Положение о конкурсе'
