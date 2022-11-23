@@ -61,7 +61,7 @@ form:
             type: repeater
             form:
                 fields:
-                    logo:
+                    photo:
                         label: Фотография
                         mode: image
                         span: left

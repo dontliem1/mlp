@@ -94,12 +94,10 @@ description = "Расскажи о событиях и проектах, кот�
     <button class="award-experts__reset" type="button" title="Сбросить фильтр" hidden></button>
     <ul class="award-experts__list">
       {% for person in this.theme.experts %}
-      <li class="award-team__person">
-          <img class="award-team__person_photo" src="{{ person.photo|media }}" alt="" width="300" height="300" loading="lazy">
-          <div class="award-criteria__item">
-              <b class="award-criteria__title">{{person.name}}</b>
-              <p class="award-criteria__description">{{person.job}}</p>
-          </div>
+      <li class="award-experts__person">
+          <img class="award-experts__person_photo" src="{{ person.photo|media }}" alt="" width="100" height="100" loading="lazy">
+          <b class="award-experts__person_name">{{person.name}}</b>
+          <small class="award-experts__person_job">{{person.job}}</small>
       </li>
       {% endfor %}
     </ul>

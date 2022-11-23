@@ -66,6 +66,7 @@ h3 {
 b {
     font-weight: 700;
 }
+
 code {
     font-size: inherit;
 }
@@ -142,13 +143,16 @@ code {
     line-height: 110%;
     font-weight: bold;
 }
+
 summary.section-heading {
     cursor: pointer;
 }
-fieldset + fieldset {
+
+fieldset+fieldset {
     margin-top: 2em;
 }
-fieldset ~ details {
+
+fieldset~details {
     margin-top: 1.5em;
 }
 
@@ -256,6 +260,7 @@ fieldset ~ details {
     text-decoration: none;
     margin-right: 1em;
 }
+
 .award-nav__logo img {
     height: auto;
     max-width: 100%;
@@ -269,6 +274,7 @@ fieldset ~ details {
     padding: 0;
     margin: 0;
 }
+
 @media (min-width: 45em) {
     .award-nav__list {
         flex-basis: 19em;
@@ -389,12 +395,14 @@ fieldset ~ details {
         padding-top: 0;
         overflow: visible;
     }
+
     .award-hero__text {
         margin-left: 45%;
         margin-top: -3em;
     }
+
     .award-hero__img {
-       top: 2em;
+        top: 2em;
     }
 }
 
@@ -566,6 +574,7 @@ fieldset ~ details {
     color: inherit;
     margin-bottom: 3em;
 }
+
 .nominate__btn img {
     height: auto;
     vertical-align: middle;
@@ -635,7 +644,7 @@ fieldset ~ details {
     flex-direction: column;
 }
 
-fieldset.award-form__row > label {
+fieldset.award-form__row>label {
     margin-top: .5em;
 }
 
@@ -646,6 +655,7 @@ fieldset.award-form__row > label {
     padding: .5em;
     border-radius: 0;
 }
+
 .award-form__input[type="radio"] {
     margin-right: .2em;
 }
@@ -659,6 +669,7 @@ textarea.award-form__input {
     margin-top: .5em;
     display: block;
 }
+
 .page-home .award-form__btn {
     background-color: #333;
     bottom: 15%;
@@ -667,6 +678,7 @@ textarea.award-form__input {
     transform: translateX(-50%);
     z-index: 1;
 }
+
 .award-form__btn {
     background-color: rgba(255, 0, 0, 0);
     border: .15em solid;
@@ -696,9 +708,11 @@ a.award-form__btn {
     border-color: #B9272D;
     color: #fff;
 }
+
 .page-home .award-form__btn:hover {
     background-color: #B9272D;
 }
+
 .award-form__btn:disabled {
     background-color: #888;
 }
@@ -706,6 +720,7 @@ a.award-form__btn {
 .award-form .link--solid:not(:hover) {
     color: inherit;
 }
+
 .award-form__inputs summary {
     cursor: pointer;
     font-size: 1.5em;
@@ -727,6 +742,7 @@ a.award-form__btn {
         padding-left: 3em;
         padding-right: 3em;
     }
+
     .award-form__inputs summary {
         margin-left: -1.5rem;
     }
@@ -749,6 +765,7 @@ a.award-form__btn {
     justify-content: space-between;
     column-gap: 4em;
 }
+
 .award-partners__list {
     display: flex;
     flex-wrap: wrap;
@@ -758,6 +775,7 @@ a.award-form__btn {
     margin: 2em 0 4em;
     gap: 2em;
 }
+
 .award-partners h2+.award-partners__item {
     margin: 2em 0 4em;
 }
@@ -900,10 +918,59 @@ a.award-form__btn {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    gap: 2em;
+    gap: 1em;
     margin-top: 2em;
     margin-bottom: 0;
     flex-basis: 100%;
+}
+
+.award-experts__person {
+    background-color: #333;
+    color: #fff;
+    display: inline-grid;
+    grid-template-columns: auto 1fr;
+    padding-bottom: .5em;
+    padding-right: .5em;
+}
+
+.award-experts__person_photo {
+    object-fit: cover;
+    object-position: center;
+    vertical-align: middle;
+}
+
+.award-experts__person_name {
+    align-items: center;
+    border-bottom: 3px solid;
+    border-top: 3px solid;
+    display: inline-flex;
+    margin-top: .5em;
+    padding-bottom: .5em;
+    padding-right: .5em;
+    padding-top: .5em;
+}
+
+.award-experts__person_job {
+    border-bottom: 3px solid;
+    margin-bottom: 0;
+    padding-bottom: .5em;
+    margin-left: .5em;
+    margin-top: .5em;
+    padding-left: .5em;
+    padding-right: .5em;
+    grid-column: 1/3;
+}
+
+@media (min-width: 45em) {
+    .award-experts__person {
+        flex-basis: 21.5em;
+    }
+}
+
+@media (min-width: 67em) {
+    .award-experts__person {
+        flex-basis: 20.1em;
+    }
 }
 
 /* Footer */
@@ -1063,14 +1130,17 @@ a.award-form__btn {
     padding-bottom: 2em;
     padding-top: 1em;
 }
+
 .quote .award-nav {
     margin-left: 0;
     margin-right: 0;
 }
+
 .quote blockquote {
     margin-top: 1.5em;
     margin-bottom: 1.5em;
 }
+
 .quote__photo {
     border-radius: 50%;
     display: block;
@@ -1080,9 +1150,11 @@ a.award-form__btn {
     object-fit: cover;
     width: 200px;
 }
+
 .quote__author {
     text-align: center;
 }
+
 .quote__title {
     text-transform: none;
     font-size: 130%;
@@ -1096,10 +1168,12 @@ a.award-form__btn {
         max-width: 64em;
         padding-top: 0;
     }
+
     .quote blockquote {
         font-size: 87.5%;
         margin: 0;
     }
+
     .quote__photo {
         grid-column: 2/3;
         grid-row: 1/5;
@@ -1108,6 +1182,7 @@ a.award-form__btn {
         width: 30vw;
         height: auto;
     }
+
     .quote__author {
         margin-left: 0;
         margin-top: 0;
