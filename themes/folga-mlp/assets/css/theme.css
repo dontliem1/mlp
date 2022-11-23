@@ -929,13 +929,14 @@ a.award-form__btn {
     color: #fff;
     display: inline-grid;
     grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
     padding-bottom: .5em;
     padding-right: .5em;
 }
 
 .award-experts__person_photo {
     object-fit: cover;
-    object-position: center;
+    object-position: top;
     vertical-align: middle;
 }
 
