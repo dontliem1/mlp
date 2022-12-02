@@ -4,30 +4,30 @@ layout = "default"
 description = "Расскажи о событиях и проектах, которые ты посетил(а) или организовывала и номинируй их на молодежную лидерскую премию."
 ==
 <?php
-use Folga\Mlp\Models\Req;
+// use Folga\Mlp\Models\Req;
 
-function onSubmitOrderForm()
-{
-    $params = [];
-    $keys = ['name', 'birthday', 'city', 'job', 'contact', 'achievements', 'level', 'title', 'team', 'social', 'project1', 'about1', 'start1', 'finish1', 'area1', 'geography1', 'quantity1', 'achievements1', 'social1', 'media1', 'vk1', 'project2', 'about2', 'start2', 'finish2', 'area2', 'geography2', 'quantity2', 'achievements2', 'social2', 'media2', 'vk2', 'project3', 'about3', 'start3', 'finish3', 'area3', 'geography3', 'quantity3', 'achievements3', 'social3', 'media3', 'vk3'];
-    foreach ($keys as $key) {
-        if (in_array($key, ['start2', 'finish2', 'start3', 'finish3']) && empty(post($key))) {
-            continue;
-        }
+// function onSubmitOrderForm()
+// {
+//     $params = [];
+//     $keys = ['name', 'birthday', 'city', 'job', 'contact', 'achievements', 'level', 'title', 'team', 'social', 'project1', 'about1', 'start1', 'finish1', 'area1', 'geography1', 'quantity1', 'achievements1', 'social1', 'media1', 'vk1', 'project2', 'about2', 'start2', 'finish2', 'area2', 'geography2', 'quantity2', 'achievements2', 'social2', 'media2', 'vk2', 'project3', 'about3', 'start3', 'finish3', 'area3', 'geography3', 'quantity3', 'achievements3', 'social3', 'media3', 'vk3'];
+//     foreach ($keys as $key) {
+//         if (in_array($key, ['start2', 'finish2', 'start3', 'finish3']) && empty(post($key))) {
+//             continue;
+//         }
 
-        $params[$key] = post($key);
-    }
-    Req::create($params);
+//         $params[$key] = post($key);
+//     }
+//     Req::create($params);
     // Mail::sendTo('YouthLeaderAward@yandex.ru', 'folga.mlp::mail.nominate', $params);
-}
+// }
 ?>
 ==
-{% if 'now'|date() >= '2022-11-18T19:00'|date() %}
+{# {% if 'now'|date() >= '2022-11-18T19:00'|date() %} #}
 <main class="container">
     <h1>Приём заявок завершён!</h1>
 </main>
-{% else %}
-<main class="container">
+{# {% else %} #}
+{# <main class="container">
     <h1>Расскажи о событии или проекте</h1>
     {{ form_open({ method: 'post', id: 'awardForm' }) }}
         <fieldset>
@@ -171,4 +171,4 @@ bindFormSubmitHandler('awardForm', 'onSubmitOrderForm');
 </script>
 {% endput %}
 {% snowboard request %}
-{% endif %}
+{% endif %} #}
