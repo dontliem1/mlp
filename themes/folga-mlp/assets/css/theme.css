@@ -1032,9 +1032,11 @@ a.award-form__btn {
     padding: .5em 1em;
 }
 .projects__person {
-    display: flex;
     align-items: center;
+    display: flex;
     font-size: 75%;
+    margin-bottom: .25em;
+    margin-top: .25em;
 }
 
 .projects__person_photo {
