@@ -947,6 +947,7 @@ a.award-form__btn {
     display: inline-flex;
     margin-top: .5em;
     padding: .5em;
+    word-break: break-word;
 }
 
 .award-experts__person_job {
@@ -1008,10 +1009,13 @@ a.award-form__btn {
 }
 
 .projects__link {
+    display: inline-flex;
     text-decoration: none;
-    display: flex;
+    flex-direction: column;
     flex-grow: 1;
     color: #fff;
+    background-color: #333;
+    transition: background-color .2s;
 }
 
 .projects__link--bg {
@@ -1022,21 +1026,38 @@ a.award-form__btn {
 
 .projects__title {
     display: flex;
-    background-color: #333;
-    text-align: center;
-    padding: .5em 1em;
-    transition: background-color .2s;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
     flex-grow: 1;
+    justify-content: center;
+    padding: .5em 1em;
+}
+.projects__person {
+    display: flex;
+    align-items: center;
+    font-size: 75%;
 }
 
-.projects__link:hover .projects__title {
+.projects__person_photo {
+    border-radius: 50%;
+    margin-right: .5em;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+.projects__link:hover {
     background-color: #B9272D;
 }
 
-.projects__link:active .projects__title {
+.projects__link:active {
     background-color: #333;
+}
+
+.projects__item_photo {
+    height: auto;
+    max-height: 12em;
+    object-fit: cover;
+    vertical-align: middle;
+    width: 100%;
 }
 
 .project__content {
@@ -1067,6 +1088,10 @@ a.award-form__btn {
     margin-top: 0;
     position: relative;
     top: -1em;
+}
+
+.project__team {
+    margin-top: 3em;
 }
 
 .project__photos {
@@ -1101,6 +1126,9 @@ a.award-form__btn {
 }
 
 @media (min-width: 67em) {
+    .projects__item {
+        flex-grow: 0;
+    }
     .project__title {
         font-size: 200%;
         min-width: 15em;

@@ -1,0 +1,20 @@
+<ul class="projects__list">
+{% for project in projects %}
+    <li class="projects__item">
+        <a href="{{ 'project' | page({slug: project.slug}) }}" class="projects__link">
+            {% if project.gallery is not empty %}
+            <img class="projects__item_photo" src="{{ project.gallery[0].photo|media }}" alt="" width="272" height="151" loading="lazy">
+            {% endif %}
+            <div class="projects__title">
+                <b>{{ project.title }}</b>
+                {% for person in project.team %}
+                <p class="projects__person">
+                    <img class="projects__person_photo" src="{{ person.photo|media }}" alt="" width="36" height="36" loading="lazy">
+                    {{person.name}}
+                </p>
+                {% endfor %}
+            </div>
+        </a>
+    </li>
+{% endfor %}
+</ul>
