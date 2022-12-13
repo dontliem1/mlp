@@ -7,6 +7,7 @@ use Model;
  */
 class Project extends Model
 {
+    use \Winter\Storm\Database\Traits\Sortable;
     use \Winter\Storm\Database\Traits\Validation;
 
     /*

@@ -19,7 +19,7 @@ class BuilderTableCreateFolgaMlpProjects extends Migration
             $table->text('gallery')->nullable();
             $table->text('content')->nullable();
             $table->text('team')->nullable();
-            $table->integer('sort_order')->nullable();
+            $table->integer('sort_order')->default(0);
         });
     }
 
